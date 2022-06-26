@@ -1,10 +1,23 @@
+import logo from './logo.svg';
 import './App.css';
-import FreshRecommendedAds from './components/contentBlocks/FreshRecommendedAds';
 
 function App() {
   return (
     <div className="App">
-      <FreshRecommendedAds />
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
     </div>
   );
 }
