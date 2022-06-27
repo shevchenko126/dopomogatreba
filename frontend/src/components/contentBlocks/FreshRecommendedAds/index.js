@@ -121,6 +121,16 @@ let freshAds = [
         price: '100',
         highlight: false,
         flag: 'new'
+    },
+    {
+        id: 12,
+        name: 'Toyota Corolla Fielder WXB G grade Hybrid',
+        category: 'Education',
+        location: 'Ukraine',
+        image: '',
+        price: '100',
+        highlight: false,
+        flag: 'new'
     }
 ]
 
@@ -136,7 +146,7 @@ function FreshRecommendedAds() {
                             <a href="/">
                                 <div className="ads__card__image">
                                     <div className="ads__card__badge">{card.flag}</div>
-                                    <img className="ads__card__bg" src={card.image ? card.image :"./d-image.png"} alt="cardImage" />
+                                    <img className="ads__card__bg" src={card.image ? card.image : "./d-image.png"} alt="cardImage" />
                                 </div>
                                 <div className="ads__card__heading">
                                     <div className="ads__card__heading__heading">
@@ -152,7 +162,11 @@ function FreshRecommendedAds() {
                         </div>
                     </div>
                 ))}
-
+            </div>
+            <div className="container ads d-flex justify-content-center">
+                <button className="ads__button__view">
+                    View Alls
+                </button>
             </div>
 
         </>

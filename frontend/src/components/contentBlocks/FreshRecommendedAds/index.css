@@ -72,6 +72,7 @@ body {
 
 
 .ads__card {
+    margin: auto;
     font-family: 'Nunito', sans-serif;
     background-color: white;
     text-align: left;
@@ -191,4 +192,34 @@ body {
 
 .fun-facts__price::before {
     content: "$";
+}
+
+.ads__button__view{
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 50px;
+    
+    color: #FFFFFF;
+    word-break: keep-all;
+
+    /* Button */
+    margin-top: 51px;
+    margin-bottom: 100px;
+
+    width: fit-content;
+    height: 50px;
+
+    background: #00AAFF;
+    border-radius: 4px;
+    border: 0;
+
+    padding: 0 52px 0 20px;
+
+    background-image: url('../../../../public/icons/ArrowRight.svg');
+    background-position: 100px 13px;
+    background-size: auto;
+    background-repeat: no-repeat;
+
+    
 }
