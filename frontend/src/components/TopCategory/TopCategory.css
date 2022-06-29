@@ -4,6 +4,7 @@ body {
 .top-category{
   font-family: "Nunito Sans", sans-serif;
   text-align: center;
+  margin-top: 100px;
 }
 .top-category__title {
   font-size: 2.5rem;
@@ -13,12 +14,16 @@ body {
   padding: 24px;
   background-color: #ffff;
   border-radius: 8px;
+
 }
 .top-category__card:hover .top-category-card-info-blockTitle__img {
   background-color: #00aaff;
+  transition: all 0.2s;
 }
 .top-category__card:hover .top-category-card-info-blockTitle__img svg path {
   stroke: white;
+  transition: all 0.2s;
+
 }
 
 .top-category-card__info {
@@ -67,9 +72,11 @@ body {
 .top-category-card-links__category:hover .top-category-card-links-category__link {
   font-weight: 600;
   color: #00aaff;
+  transition: all 0.2s;
 }
 .top-category-card-links__category:hover .top-category-card-links-category-link__img svg path {
   stroke:#00AAFF;
+  transition: all 0.2s;
 }
 .top-category-card-links-category-link__img svg{
   display: block;

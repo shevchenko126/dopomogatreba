@@ -1,3 +1,5 @@
+import React from "react";
+
 import "./TopCategory.css";
 import { ReactComponent as MobilImg } from "../../access/icons/DeviceMobileSpeaker.svg";
 import mobilImg from "../../access/icons/DeviceMobileSpeaker.svg";
@@ -146,7 +148,7 @@ const topCategory = [
 
 const TopCategory = () => {
   return (
-    <>
+    <div className="container-xl">
       <div className="top-category">
         <h2 className="top-category__title">TopCategory</h2>
       </div>
@@ -186,7 +188,7 @@ const TopCategory = () => {
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 };
 
