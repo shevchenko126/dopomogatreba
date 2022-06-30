@@ -9,6 +9,7 @@ class Advert(models.Model):
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE,
                                 blank=True, null=True)
 
+
     def __str__(self):
         return self.title
 
@@ -38,3 +39,4 @@ class AdvertResponse(models.Model):
     class Meta:
         verbose_name = "Advert response"
         verbose_name_plural = "Advert responses"
+
