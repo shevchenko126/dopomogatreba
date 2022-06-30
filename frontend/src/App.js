@@ -1,9 +1,10 @@
-import Subscription from "./components/contentBlocks/01_Home_01-block7(subscribe)";
+import './App.css';
+import FreshRecommendedAds from './components/contentBlocks/FreshRecommendedAds';
 
 function App() {
   return (
     <div className="App">
-      <Subscription />
+      <FreshRecommendedAds />
     </div>
   );
 }
