@@ -40,3 +40,15 @@ class AdvertResponse(models.Model):
         verbose_name = "Advert response"
         verbose_name_plural = "Advert responses"
 
+class AdvertFeature(models.Model):
+    # advert - ForeignKey Advert;  text - charField
+    text = models.CharField(max_length=200)
+    advert = models.ForeignKey(Advert, max_length=50, on_delete=models.CASCADE,
+                                blank=True, null=True)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = "Advert feature"
+        verbose_name_plural = "Advert features"
