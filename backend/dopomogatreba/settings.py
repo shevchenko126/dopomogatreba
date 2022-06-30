@@ -45,11 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'adverts',
-<<<<<<< HEAD
-    'content',
-=======
     'content'
->>>>>>> 1ebbf31daafbc5ee37967331a558b96b76b8e28c
 ]
 
 MIDDLEWARE = [
