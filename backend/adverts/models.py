@@ -1,3 +1,4 @@
+from statistics import mode
 from django.conf import settings
 from django.db import models
 
@@ -39,4 +40,17 @@ class AdvertResponse(models.Model):
     class Meta:
         verbose_name = "Advert response"
         verbose_name_plural = "Advert responses"
+
+
+class AdvertFeature(models.Model):
+    text = models.CharField(max_length=200)
+    advent = models.ForeignKey(Advert, max_length=50, on_delete=models.CASCADE,
+                                blank=True, null=True)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = "Advert feature"
+        verbose_name_plural = "Advert features"
 
