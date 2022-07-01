@@ -1,5 +1,7 @@
 import './index.css';
 import { ReactComponent as ManageSvg } from "../../../access/icons/manage.svg";
+import { ReactComponent as ChatSvg } from "../../../access/icons/chat.svg";
+import { ReactComponent as UserSvg } from "../../../access/icons/user.svg";
 
 const SignInFeature = () => {
     return (
@@ -18,7 +20,7 @@ const SignInFeature = () => {
       </div>
       <div class="lft__chat">
         <div class="lft__img">
-          <img src="./img/chat.svg" alt="#"/>
+          <ChatSvg />
         </div>
         <div class="lft__dscr">
           <h3 class="lft__title">Chat & Messaging with Anyone, Anytime</h3>
@@ -28,7 +30,7 @@ const SignInFeature = () => {
       </div>
       <div class="lft__user">
         <div class="lft__img">
-          <img src="./img/user.svg" alt="#"/>
+          <UserSvg/>
         </div>
         <div class="lft__dscr">
           <h3 class="lft__title">245,365 Verified User</h3>
