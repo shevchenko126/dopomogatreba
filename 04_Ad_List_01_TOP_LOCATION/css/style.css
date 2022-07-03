@@ -1,0 +1,262 @@
+@charset "UTF-8";
+/* Обнуление */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+body {
+  font-family: "Nunito";
+  font-size: 16px;
+}
+.container {
+  padding: 0;
+  margin: 0;
+}
+.toplocation {
+  width: 312px;
+  /* height: 400px; */
+  border-left: 1px solid #EBEEF7;
+  border-right: 1px solid #EBEEF7;
+  /* border-bottom: 1px solid #EBEEF7; */
+  border-radius: 10px;
+}
+.head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+/* .head h4 {
+  font-weight: 600;
+  margin: 24px 24px 20px 24px;
+} */
+.inputfield {
+  --background: #fff;
+  --text-color: #414856;
+  --primary-color: #4F29F0;
+  --border-radius: 10px;
+  --width: 190px;
+  --height: 55px;
+  width: 260px;
+  height: 48px;
+  font-family: inherit;
+  font-size: 87%;
+  border: 1px solid #EBEEF7;
+  border-radius: 10px;
+  margin: 0px 24px 20px 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.inputfield svg {
+  width: 20px;
+  height: 20px;
+  margin: 14px 6px 14px 17px;
+}
+
+input[type=text] {
+  position: relative;
+  width: 190px;
+  font: 400 14px "Nunito", sans-serif;
+  color: #414856;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+  padding: 0 0 0 6px;
+  -webkit-transition: width 0.3s ease;
+  transition: width 0.3s ease;
+  z-index: 10;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.chekfilter {
+  width: 264px;
+  height: 290px;
+  color: #464d61;
+  font-weight: 400;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+input[type=checkbox]:checked ~ .geekmark {
+  color: #00aaff;
+  font-weight: 400;
+  font-size: 100%;
+  line-height: 24px;
+  border: 2px solid #00aaff;
+}
+
+.maid {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 0 0 12px 10px;
+}
+
+/* Hide the default checkbox */
+input[type=checkbox] {
+  visibility: hidden;
+}
+
+/* Creating a custom checkbox based on demand */
+.geekmark {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #fff;
+  color: #464d61;
+  font-weight: 400;
+  font-size: 100%;
+  line-height: 24px;
+  padding: 0px 0 0 8px;
+  border: 2px solid #dadde5;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.geekmark p {
+  width: 220px;
+  margin: -4px 0 0 16px;
+  text-align: left;
+}
+
+.maid:hover input ~ .geekmark {
+  background-color: #eee;
+}
+
+.maid input:checked ~ .geekmark {
+  background-color: #00aaff;
+}
+
+/* Checkmark to be shown in checkbox */
+/* It is not be shown when not checked */
+.geekmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Display checkmark when checked */
+.maid input:checked ~ .geekmark:after {
+  display: block;
+}
+
+/* Styling the checkmark using webkit */
+/* Rotated the rectangle by 45 degree and 
+        showing only two border to make it look
+        like a tickmark */
+.maid .geekmark:after {
+  left: 6px;
+  bottom: 4px;
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+#accordionMenu {
+  max-width: 312px;
+}
+.panel-default>.panel-heading {
+  color: #191f33;
+  font-weight: 600;
+  font-family: 'Nunito';
+  font-size: 100%;
+  background-color: #fff;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.panel-heading {
+  display: flex;
+  justify-content: center;
+}
+.panel-default>.panel-heading a {
+  display: block;
+  padding: 10px 15px 10px 0px;
+  text-decoration: none;
+}
+.panel-default>.panel-heading a:after {
+  content: "";
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  float: right;
+  transition: transform .25s linear;
+  -webkit-transition: -webkit-transform .25s linear;
+}
+.h4paneltitle {
+  color: #191f33;
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+}
+.h4paneltitle i {
+  font-size: 162%;
+  color: #636a80;
+  display: flex;
+  align-items: center;
+}
+.panel-default>.panel-heading i.collapsed {
+  transform: rotate(0deg);
+}
+.panel-default>.panel-heading i {
+  transform: rotate(180deg);
+}
