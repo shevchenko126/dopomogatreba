@@ -1,0 +1,146 @@
+body {
+	background-color: #ebeef7;
+}
+.error {
+	position: absolute;
+	top: 572.72px;
+	right: 705.69px;
+	bottom: 1096.86px;
+	left: 710.02px;
+}
+.planets {
+	position: absolute;
+	top: 388.69px;
+	right: 693.17px;
+	bottom: 946.54px;
+	left: 686.77px;
+}
+.kosmos {
+	position: absolute;
+	top: 369.26px;
+	right: 637.65px;
+	bottom: 893.18px;
+	left: 637.65px;
+}
+.rocket {
+	position: absolute;
+	top: 628px;
+	right: 904.13px;
+	bottom: 956.54px;
+	left: 724.45px;
+}
+.astronaut {
+	position: absolute;
+	top: 408.21px;
+	right: 694.76px;
+	bottom: 1010.81px;
+	left: 895.39px;
+}
+.niz {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0px;
+	gap: 32px;
+
+	width: 648px;
+	height: 222px;
+
+	position: absolute;
+	left: 636px;
+	top: 1050px;
+	bottom: 588px;
+	right: 636px;
+}
+
+.masseg {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0px;
+	gap: 20px;
+	justify-content: center;
+	width: 648px;
+	height: 140px;
+
+	flex: none;
+	order: 0;
+	flex-grow: 0;
+}
+.knopka {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: 0px 20px;
+	gap: 8px;
+
+	width: 182px;
+	height: 50px;
+
+	flex: none;
+	order: 1;
+	flex-grow: 0;
+}
+
+.knopka1 {
+	background-color: #00aaff;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: 0px 20px;
+	border: none;
+	gap: 8px;
+
+	width: 182px;
+	height: 50px;
+
+	border-radius: 4px;
+	flex: none;
+	order: 1;
+	flex-grow: 0;
+
+	font-family: "Nunito Sans";
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 50px;
+	color: #ffffff;
+}
+
+.masseg1 {
+	width: 648px;
+	height: 96px;
+
+	font-family: "Nunito Sans";
+	font-style: normal;
+	font-weight: 600;
+	font-size: 40px;
+	line-height: 48px;
+
+	text-align: center;
+	color: #191f33;
+
+	flex: none;
+	order: 0;
+	flex-grow: 0;
+}
+.masseg2 {
+	width: 644px;
+	height: 24px;
+
+	font-family: "Nunito";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 24px;
+	margin: 16px 0px;
+
+	text-align: center;
+	color: #767e94;
+
+	flex: none;
+	order: 1;
+	flex-grow: 0;
+}
