@@ -1,0 +1,734 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&family=Nunito+Sans:wght@700&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.main-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+  gap: 32px;
+  max-width: 648px;
+  max-height: 748px;
+  background: #ffffff;
+  box-shadow: 0px 24px 100px rgba(0, 29, 73, 0.12);
+  border-radius: 20px;
+  position: relative;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  gap: 24px;
+  width: 548px;
+  height: 128px;
+}
+
+.sign-up {
+  width: 146px;
+  height: 48px;
+}
+.sign-up-text {
+  width: 146px;
+  height: 48px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
+  text-align: center;
+  color: #191f33;
+  letter-spacing: -0.5px;
+}
+
+.sign-up-btns {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 24px;
+  width: 548px;
+  height: 56px;
+}
+
+.sign-up-btn {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  background: #ffffff;
+  border: 1px solid #ebeef7;
+  border-radius: 6px;
+  width: 262px;
+  height: 56px;
+  padding: 16px 24px;
+}
+
+.sign-up-icon-btn {
+  position: relative;
+  height: 20px;
+  width: 20px;
+}
+
+.fa-google {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  background: conic-gradient(
+      from -45deg,
+      #ea4335 110deg,
+      #4285f4 90deg 180deg,
+      #34a853 180deg 270deg,
+      #fbbc05 270deg
+    )
+    73% 55%/150% 150% no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  transform: scale(1.1);
+  z-index: 3;
+}
+
+.facebook-logo {
+  /* Vector */
+  position: absolute;
+  left: 25%;
+  right: 25%;
+  top: 0%;
+  bottom: 0%;
+}
+
+.sign-up-btns-text {
+  width: 164px;
+  height: 24px;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #464d61;
+  margin-bottom: 0;
+}
+
+.sign-up-btns-text.google {
+  width: 144px;
+  letter-spacing: -0.15px;
+}
+.sign-in {
+  position: relative;
+}
+
+.sign-in-heading {
+  position: relative;
+  width: 177px;
+  height: 24px;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #464d61;
+  letter-spacing: -0.1px;
+  padding: 0 12px;
+  background-color: #ffffff;
+}
+
+.sign-in-line {
+  position: absolute;
+  width: 548px;
+  height: 0px;
+  left: calc(-105%);
+  top: calc(45%);
+  border: 1px solid #ebeef7;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 16px;
+  max-width: 548px;
+  height: 286px;
+}
+
+.full-name-and-user-name {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 16px;
+  width: 548px;
+  height: 48px;
+}
+
+.input {
+  box-sizing: border-box;
+  width: 548px;
+  height: 48px;
+  background: #ffffff;
+  border: 1px solid #edeff5;
+  border-radius: 5px;
+  text-indent: 18px;
+}
+
+.input::placeholder {
+  position: absolute;
+  height: 24px;
+  top: 12px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #939aad;
+}
+
+.password {
+  position: relative;
+}
+
+.eye-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  right: 16px;
+  top: calc(50% - 24px / 2);
+}
+.eye {
+  position: relative;
+  width: 24px;
+  height: 18px;
+}
+.eye-svg {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.checkbox-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  padding: 0;
+  width: 454px;
+  height: 30px;
+  flex: none;
+  order: 4;
+  flex-grow: 0;
+  /* letter-spacing: -0.5px; */
+}
+
+.chekbox-description {
+  width: 524px;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #636a80;
+  text-align: left;
+}
+.chekbox-description-ref {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-decoration: none;
+  color: #00aaff;
+}
+
+.checkbox + .checkbox-sign {
+  box-sizing: border-box;
+  width: 22px;
+  height: 22px;
+  background: #ffffff;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: 1.5px solid #dadde6;
+  border-radius: 3px;
+}
+.checkbox:checked + .checkbox-sign {
+  background-image: url(../../../img/checked-img.jpg);
+}
+
+.checkbox {
+  display: none;
+  margin-bottom: 0;
+}
+
+label {
+  margin-bottom: 0 !important;
+}
+
+button {
+  border: none;
+}
+.button-sign-in {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 32px;
+  gap: 12px;
+  width: 548px;
+  height: 58px;
+  background: #00aaff;
+  border-radius: 6px;
+}
+
+.sign-in-btn-description {
+  width: 58px;
+  height: 58px;
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 58px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: capitalize;
+
+  color: #ffffff;
+}
+
+.arr-div {
+  width: 24px;
+  height: 24px;
+  position: relative;
+}
+
+.vert-arr,
+.hor-arr {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  /* left: 0; */
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.log-in {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  width: 208px;
+  height: 24px;
+}
+
+.log-in-text {
+  width: 145px;
+  height: 24px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #767e94;
+}
+
+.log-in-ref {
+  width: 63px;
+  height: 24px;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  line-height: 24px;
+  padding-left: 5px;
+  color: #00aaff;
+  letter-spacing: -0.5px;
+}
+
+@media (max-width: 625px) {
+  .main-section {
+    padding: 25px;
+  }
+  .sign-up-text {
+    font-size: 36px;
+  }
+  .sign-up-btns {
+    width: 480px;
+    justify-content: space-between;
+  }
+  .sign-up-btn {
+    width: 250px;
+    justify-content: flex-start;
+    gap: 5px;
+    padding-right: 0px;
+  }
+
+  .facebook {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 16px;
+    letter-spacing: -0.5px;
+  }
+
+  .sign-in-line {
+    width: 480px;
+    left: calc(-85%);
+  }
+  .form,
+  .full-name-and-user-name {
+    width: 480px;
+    justify-content: space-between;
+  }
+  .input.full-name,
+  .input.user-name {
+    width: 250px;
+  }
+  .input {
+    width: 480px;
+  }
+  .button-sign-in {
+    width: 480px;
+  }
+}
+
+@media (max-width: 525px) {
+  .main-section {
+    padding: 20px;
+    border-radius: 10px;
+  }
+  .sign-up-text {
+    font-size: 32px;
+  }
+
+  .sign-up-btn {
+    height: 50px;
+    padding-left: 8px;
+  }
+  .google {
+    display: flex;
+    justify-content: center;
+    gap: 0px;
+    padding-left: 18px;
+  }
+
+  .facebook {
+    gap: 0;
+    padding-left: 16px;
+  }
+
+  .sign-in-line {
+    left: calc(-77%);
+  }
+  .sign-up-btns,
+  .sign-in-line,
+  .form,
+  .full-name-and-user-name,
+  .input,
+  .button-sign-in {
+    width: 450px;
+  }
+
+  .sign-up-btn,
+  .input.full-name,
+  .input.user-name {
+    width: 230px;
+  }
+  .input {
+    height: 42px;
+  }
+  .input::placeholder {
+    top: 10px;
+  }
+
+  .checkbox-div {
+    justify-content: flex-start;
+    gap: 8px;
+  }
+
+  .chekbox-description {
+    letter-spacing: -0.5px;
+  }
+}
+
+@media (max-width: 460px) {
+  .main-section {
+    gap: 5px;
+    border-radius: 8px;
+  }
+
+  .sign-up-text {
+    font-size: 24px;
+  }
+  .heading {
+    width: 360px;
+    height: 102px;
+    gap: 10px;
+    margin-bottom: 0;
+  }
+
+  .sign-in {
+    margin-bottom: 8px;
+  }
+
+  .sign-in-line {
+    width: 360px;
+    left: calc(-61%);
+    top: calc(49%);
+  }
+
+  .sign-in-heading {
+    font-size: 12px;
+    width: 100%;
+  }
+
+  .sign-up-btns,
+  .form,
+  .full-name-and-user-name,
+  .input,
+  .button-sign-in,
+  .checkbox-div {
+    width: 360px;
+    height: 36px;
+  }
+
+  .sign-up-btn,
+  .input.full-name,
+  .input.user-name {
+    width: 170px;
+    height: 36px;
+    border-radius: 4px;
+  }
+
+  .sign-up-btns-text {
+    font-size: 12px;
+    text-indent: -10px;
+  }
+
+  .google {
+    gap: 6px;
+  }
+  .google,
+  .facebook {
+    padding-left: 14px;
+    width: 168px;
+  }
+
+  .form {
+    height: 230px;
+    gap: 8px;
+  }
+  .input {
+    text-indent: 12px;
+    border-radius: 4px;
+  }
+  .input::placeholder {
+    top: 9px;
+    font-size: 12px;
+  }
+  .checkbox-div {
+    height: 24px;
+    gap: 10x;
+    margin-bottom: 12px;
+  }
+  .checkbox + .checkbox-sign {
+    width: 25px;
+    height: 18px;
+  }
+
+  .chekbox-description,
+  .chekbox-description-ref {
+    font-size: 12px;
+  }
+  .checkbox-sign {
+    transform: scale(0.75);
+  }
+
+  .button-sign-in {
+    gap: 0px;
+    border-radius: 4px;
+  }
+  .sign-in-btn-description {
+    font-size: 14px;
+    width: 48px;
+  }
+
+  .arr-div {
+    transform: scale(0.65);
+  }
+
+  .log-in {
+    width: 160px;
+    justify-content: flex-end;
+    margin-top: 10px;
+  }
+  .log-in-text,
+  .log-in-ref {
+    font-size: 12px;
+  }
+
+  .eye-div {
+    right: 8px;
+  }
+  .eye-svg {
+    transform: scale(0.65);
+  }
+}
+
+@media (max-width: 380px) {
+  .main-section {
+    gap: 3px;
+    padding: 10px;
+  }
+
+  .heading {
+    width: 340px;
+    height: 98px;
+    gap: 10px;
+  }
+
+  .sign-in {
+    margin-bottom: 8px;
+  }
+
+  .sign-in-line {
+    width: 340px;
+    left: calc(-56%);
+  }
+
+  .sign-up-btns,
+  .form,
+  .full-name-and-user-name,
+  .input,
+  .button-sign-in,
+  .checkbox-div {
+    width: 340px;
+    height: 32px;
+  }
+
+  .sign-up-btn,
+  .input.full-name,
+  .input.user-name {
+    width: 158px;
+    height: 32px;
+  }
+
+  .sign-up-btns-text {
+    font-size: 12px;
+    text-indent: -2px;
+  }
+
+  .google {
+    gap: 6px;
+  }
+  .google,
+  .facebook {
+    padding-left: 8px;
+    width: 158px;
+  }
+
+  .facebook-logo {
+    transform: scale(0.8);
+  }
+  .fa-google {
+    transform: scale(0.9);
+  }
+
+  .form {
+    height: 200px;
+  }
+  .input {
+    text-indent: 10px;
+  }
+  .input::placeholder {
+    top: 7px;
+  }
+  .checkbox-div {
+    height: 24px;
+    gap: 10x;
+    margin-bottom: 12px;
+  }
+  .checkbox + .checkbox-sign {
+    width: 18px;
+    height: 14px;
+  }
+
+  .chekbox-description,
+  .chekbox-description-ref {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 350px) {
+  .sign-in-line {
+    width: 300px;
+    left: calc(-43%);
+  }
+
+  .sign-up-btns,
+  .form,
+  .full-name-and-user-name,
+  .input,
+  .button-sign-in,
+  .checkbox-div {
+    width: 300px;
+    height: 28px;
+  }
+
+  .sign-up-btns {
+    gap: 0px;
+  }
+  .sign-up-btn,
+  .input.full-name,
+  .input.user-name {
+    width: 145px;
+    height: 28px;
+  }
+
+  .google {
+    gap: 5px;
+  }
+  .google,
+  .facebook {
+    padding-left: 4px;
+    width: 145px;
+    height: 28px;
+  }
+
+  .form {
+    height: 180px;
+  }
+
+  .full-name-and-user-name {
+    gap: 4px;
+  }
+  .input {
+    text-indent: 8px;
+  }
+  .input::placeholder {
+    top: 5px;
+  }
+
+  .log-in {
+    margin-top: 5px;
+  }
+}
