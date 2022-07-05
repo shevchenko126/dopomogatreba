@@ -1,12 +1,10 @@
-import SearchBar from "./components/contentBlocks/MyAds/SearchBar";
+import MyAds from "./components/contentBlocks/MyAds";
 function App() {
 
   
   return (
     <div className="App">
-      {/* < FreshRecommendedAds /> */}
-      
-        <SearchBar />
+      <MyAds />
     </div>
   );
 }
