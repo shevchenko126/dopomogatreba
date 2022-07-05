@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.css';
-import '../index.css'
+import '../../../index.css'
 import React, { useRef, useEffect, useState } from "react";
 
 function SearchSelectDropdownMin({ props }) {
@@ -74,7 +74,7 @@ function SearchSelectDropdownMin({ props }) {
     return (
         <>
             <div className="dropdown">
-                <button ref={wrapperRef} className="search__dropdown__select">{props.name}</button>
+                <button ref={wrapperRef} className="search__dropdown__select" title={props.name}>{props.name}</button>
             </div>
             <div className="dropdown-content">
                 {

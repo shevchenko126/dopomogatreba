@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.css';
-import '../index.css'
+import '../../../index.css'
 
 import React, { useRef, useEffect, useState } from "react";
 
@@ -69,7 +69,7 @@ function SearchSelectDropdownMax({ props }) {
     return (
         <>
             <div className="dropdown">
-                <button ref={wrapperRef} className="search__dropdown__select">{props.name}</button>
+                <button ref={wrapperRef} className="search__dropdown__select" title={props.name}>{props.name}</button>
                 <div className="dropdown-content">
                     {
                         props.links.map(({ name, href }, key) => {
