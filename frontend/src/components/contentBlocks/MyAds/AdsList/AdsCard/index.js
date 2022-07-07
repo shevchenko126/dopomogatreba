@@ -1,12 +1,17 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import '../../index.css'
 
-function AdsCard( { props } ) {
+function AdsCard( { props, loading } ) {
+
+    if(loading){
+        return <h2>Loading...</h2>
+    }
+
+    console.log(props)
     return (
-        <>
+        <div className="ads-dashboard d-flex flex-column justify-content-start align-items-start">
                 {props.map((card) => (
-                    <div key={card.id} className="ads-dashboard d-flex flex-column justify-content-start align-items-start">
-                        <div className="ads__card d-flex flex-row align-items-center">
+                        <div key={card.id} className="ads__card d-flex flex-row align-items-center">
                             <div className="ads__card__info">
                                 <div className="ads__card__image">
                                     <img src={card.image} alt="cardImage" />
@@ -34,10 +39,9 @@ function AdsCard( { props } ) {
                                 </div>
                             </div>
                         </div>
-                    </div>
                 ))}
-            </>
+            </div>
             )
 }
 
-            export default AdsCard
+export default AdsCard
