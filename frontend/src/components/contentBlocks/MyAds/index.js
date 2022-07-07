@@ -4,9 +4,9 @@ import SearchBar from './SearchBar';
 import AdsList from './AdsList';
 
 
-function MyAds(props) {
+function MyAds() {
     return (
-        <div className="container m-2">
+        <div className="container m-2 ">
             <SearchBar />
             <AdsList />
         </div>

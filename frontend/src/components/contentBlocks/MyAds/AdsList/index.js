@@ -171,7 +171,7 @@ function AdsList() {
     const prevPage = () => setCurrentPage(prev => prev - 1)
 
     return (
-        <div className="ads-dashboard d-flex flex-column justify-content-start align-items-start">
+        <div className="ads-dashboard d-flex flex-column justify-content-center align-items-start">
             <AdsNavBar />
             <AdsCard props={currentCard} loading={loading} />
             <AdsPagination cardsPerPage={cardsPerPage} totalCards={cards.length} paginate={paginate} />
