@@ -16,9 +16,9 @@ function AdsPagination({ cardsPerPage, totalCards, paginate }) {
    
 
     return (
-        <div className="d-flex flex-row justify-content-start align-items-start">
+        <div className="d-flex flex-row ">
 
-            <ul className="ads-pagination d-flex flex-row justify-content-start align-items-start">
+            <ul className="ads-pagination d-flex ">
                 {
                     pageNumbers.map(number => (
                         <li className="page-elem d-flex" key={number}>
