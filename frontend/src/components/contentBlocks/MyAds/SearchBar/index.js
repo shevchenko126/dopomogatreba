@@ -5,7 +5,7 @@ import SearchSelectDropdownMenu from './SearchSelectDropdownMenu';
 
 const filters = [
     {
-        name: 'all',
+        name: 'All',
         links: [
             {
                 name: 'link1',
@@ -22,7 +22,7 @@ const filters = [
         ]
     },
     {
-        name: 'recently changed',
+        name: 'Recently changed',
         links: [
             {
                 name: 'link1',
@@ -35,7 +35,7 @@ const filters = [
         ]
     },
     {
-        name: 'all category',
+        name: 'All category',
         links: [
             {
                 name: 'link3',
@@ -55,7 +55,7 @@ const filters = [
 
 function SearchBar() {
     return (
-        <div class="search-block d-flex flex-md-row flex-column justify-content-between align-items-center p-1">
+        <div className="search-block d-flex flex-md-row flex-column justify-content-between align-items-center p-1">
             <SearchInput placeholder='Ads tittle, keyword' />
             <SearchSelectDropdownMenu props={filters} />
         </div>
