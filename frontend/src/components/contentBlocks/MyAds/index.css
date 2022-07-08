@@ -142,7 +142,7 @@ body {
 
 .ads__card__image img {
     width: 80px;
-    height: 80px; 
+    height: 80px;
     border-radius: 8px;
     position: center;
     overflow: hidden;
@@ -394,6 +394,36 @@ body {
     width: 18.472%;
 }
 
+.ads-pagination {
+    margin-top: 39px;
+    width: 100%;
+    max-width: 984px;
+}
+
+.page-elem{
+    list-style-type: none;
+}
+
+.page-elem:hover {
+    background: #EBEEF7;
+}
+
+.page-elem:focus {
+    background: #00AAFF;
+}
+
+
+.page-link {
+    width: 48px;
+    height: 48px;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 16px;
+    color: #636A80;
+
+}
+
+
 @media only screen and (min-width: 1200px) {
     /* Стили для устройств с большой шириной экрана >1200px */
 }
@@ -462,7 +492,7 @@ body {
 
     .ads__card__image img {
         width: 70px;
-        height: 70px; 
+        height: 70px;
     }
 
     .ads__card__name {
@@ -602,6 +632,7 @@ body {
         top: 125px;
         width: 100%;
     }
+
     .ads-navigation {
         display: none !important;
     }

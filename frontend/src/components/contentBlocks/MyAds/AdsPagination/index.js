@@ -1,8 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import '../index.css'
-import axios from 'axios'
-import React, { useState, useEffect } from "react";
-import AdsCard from "../AdsList/AdsCard";
 
 
 function AdsPagination({ cardsPerPage, totalCards, paginate }) {
@@ -16,13 +13,13 @@ function AdsPagination({ cardsPerPage, totalCards, paginate }) {
    
 
     return (
-        <div className="d-flex flex-row ">
+        <div className="ads-pagination d-flex flex-row justify-content-center ">
 
-            <ul className="ads-pagination d-flex ">
+            <ul className="d-flex ">
                 {
                     pageNumbers.map(number => (
-                        <li className="page-elem d-flex" key={number}>
-                            <a href="!#" className="page-link" onClick={() => paginate(number)}>
+                        <li className="page-elem" key={number}>
+                            <a href="!#" className="page-link d-flex align-items-center justify-content-center" onClick={() => paginate(number)}>
                                 {number}
                             </a>
                         </li>
