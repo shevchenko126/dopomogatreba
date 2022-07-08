@@ -5,7 +5,7 @@ import { ReactComponent as MobilImg } from "../../access/icons/DeviceMobileSpeak
 import mobilImg from "../../access/icons/DeviceMobileSpeaker.svg";
 import { ReactComponent as ArrowRight } from "../../access/icons/CaretRight.svg";
 
-const topCategory = [
+export const topCategory = [
   {
     id: 1,
     name: "Electronic",
@@ -55,7 +55,7 @@ const topCategory = [
   {
     id: 3,
     name: "Vehicles",
-    items: "69,114",
+    items: "(69,114)",
     img: mobilImg,
     links: [
       {
