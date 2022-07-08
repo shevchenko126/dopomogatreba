@@ -24,7 +24,7 @@ function AdsCard( { props, loading } ) {
                             <div className="ads__card__buttons">
                                 <button className="ads__card__edit" title="Edit">Edit</button>
                                 <div className="dropdown">
-                                    <button onclick="toggle(this);" className="ads__drop__button" title="More"></button>
+                                    <button className="ads__drop__button" title="More"></button>
                                     <div className="dropdown-content">
                                         <a className="d-flex flex-row justify-content-start align-items-center" href="https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/HEAD/docs/rules/anchor-is-valid.md">
                                             View Ads Details

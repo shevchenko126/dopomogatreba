@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import '../../index.css'
-import React, { useRef, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import SearchSelectDropdownMax from './SearchSelectDropDownMax';
 import SearchSelectDropdownMin from './SearchSelectDropDownMin';
 

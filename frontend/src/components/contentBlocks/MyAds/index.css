@@ -17,7 +17,6 @@ body {
 
 .search-block {
     width: 100%;
-    max-width: 984px;
     /* height: 56px; */
     padding: 0px;
     gap: 27px;
@@ -33,7 +32,6 @@ body {
 .search__input-field {
     box-sizing: border-box;
     width: 100%;
-    max-width: 384px;
     height: 56px;
     background: #FFFFFF;
     border: 1px solid #EBEEF7;
@@ -107,7 +105,6 @@ body {
 
 .ads-dashboard {
     width: 100%;
-    max-width: 984px;
 }
 
 .ads__card {
@@ -243,8 +240,9 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 164px;
+    width: max-content;
     height: 50px;
+    gap: 12px;
 }
 
 .ads__card__edit {
@@ -309,8 +307,6 @@ body {
     position: relative;
     display: inline-block;
     padding: 0;
-    /* float: right; */
-    margin-left: 12px;
 }
 
 .dropdown-content {
@@ -321,7 +317,7 @@ body {
 
     padding: 12px;
     width: 234px;
-    height: 140px;
+    height: max-content;
     background: #FFFFFF;
     border: 1px solid #EBEEF7;
     box-shadow: 0px 5px 24px rgba(0, 34, 51, 0.04);
@@ -332,27 +328,6 @@ body {
     z-index: 1;
     margin: 5px auto;
 }
-
-/*
-.dropdown-content {
-    display: none;
-    position: absolute;
-    box-sizing: border-box;
-
-    padding: 12px;
-    width: 234px;
-    height: 140px;
-    background: #FFFFFF;
-    border: 1px solid #EBEEF7;
-    box-shadow: 0px 5px 24px rgba(0, 34, 51, 0.04);
-    border-radius: 10px;
-
-    min-width: 160px;
-    overflow: auto;
-    right: 0;
-    z-index: 1;
-    margin: 5px 0;
-}*/
 
 .dropdown-content a {
     display: flex;
@@ -432,7 +407,6 @@ body {
     background: #00AAFF;
 }
 
-
 .page-link {
     width: 48px;
     height: 48px;
@@ -443,6 +417,50 @@ body {
     color: #636A80;
 }
 
+.page-btn-link {
+    width: 48px;
+    height: 48px;
+    background-color: #E8F7FF;
+}
+
+.page-btn-link:hover {
+    background-color: #00AAFF;
+}
+
+.page-btn-link:hover.arrow-left::after,
+.page-btn-link:hover.arrow-right::after {
+    background-color: white;
+}
+
+.arrow-left::after {
+    content: "";
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    -webkit-mask: url(../../../../public/icons/ArrowRight.svg) no-repeat 50% 50%;
+    mask: url(../../../../public/icons/ArrowRight.svg) no-repeat 50% 50%;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+    background-color: #00AAFF;
+}
+
+.arrow-right::after {
+    content: "";
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    -webkit-mask: url(../../../../public/icons/ArrowRight.svg) no-repeat 50% 50%;
+    mask: url(../../../../public/icons/ArrowRight.svg) no-repeat 50% 50%;
+    background-color: #00AAFF;
+}
+
 
 @media only screen and (min-width: 1200px) {
     /* Стили для устройств с большой шириной экрана >1200px */
@@ -451,16 +469,11 @@ body {
 @media only screen and (min-width: 640px) and (max-width:1200px) {
     /* Стили для устройств с маленьким экраном, размерами 768px - 1199px (планшеты и подобные) */
 
-    .search__input-field {
-        max-width: 280px;
-    }
-
     .search-block {
         /* max-width: 578px;
         font-size: 10px; */
         max-width: 100%;
         font-size: 13px;
-        gap: 4px;
     }
 
     .search__dropdown {
@@ -599,7 +612,8 @@ body {
     .dropdown-content {
         /* width: 100%; */
         width: 250px;
-        height: 133px;
+        height: max-content;
+        gap: 15px;
     }
 
     .dropdown-content a {
@@ -651,6 +665,7 @@ body {
     .dropdown-content {
         top: 125px;
         width: 100%;
+        height: max-content;
     }
 
     .ads-navigation {

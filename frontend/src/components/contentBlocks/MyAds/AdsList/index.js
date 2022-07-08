@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import '../index.css'
-import axios from 'axios'
+// import axios from 'axios'
 import AdsNavBar from './AdsNavBar';
 import AdsCard from './AdsCard';
 import AdsPagination from '../AdsPagination';
@@ -10,7 +10,7 @@ const cards = [
 
     {
         id: 0,
-        image: '',
+        image: 'https://picsum.photos/200',
         name: "CheckCheckCheckCheck",
         date: 0,
         price: 250,
@@ -18,7 +18,7 @@ const cards = [
     },
     {
         id: 1,
-        image: '',
+        image: 'https://picsum.photos/200',
         name: "CheckCheckCheckCheck",
         date: 0,
         price: 251,
@@ -26,7 +26,7 @@ const cards = [
     },
     {
         id: 2,
-        image: '',
+        image: 'https://picsum.photos/200',
         name: "CheckCheckCheckCheck",
         date: 0,
         price: 252,
@@ -34,7 +34,7 @@ const cards = [
     },
     {
         id: 3,
-        image: '',
+        image: 'https://picsum.photos/200',
         name: "CheckCheckCheckCheck",
         date: 0,
         price: 253,
@@ -42,7 +42,7 @@ const cards = [
     },
     {
         id: 4,
-        image: '',
+        image: 'https://picsum.photos/200',
         name: "CheckCheckCheckCheck",
         date: 0,
         price: 254,
@@ -50,7 +50,7 @@ const cards = [
     },
     {
         id: 5,
-        image: '',
+        image: 'https://picsum.photos/200',
         name: "CheckCheckCheckCheck",
         date: 0,
         price: 255,
@@ -58,7 +58,7 @@ const cards = [
     },
     {
         id: 6,
-        image: '',
+        image: 'https://picsum.photos/200',
         name: "CheckCheckCheckCheck",
         date: 0,
         price: 256,
@@ -66,7 +66,7 @@ const cards = [
     },
     {
         id: 7,
-        image: '',
+        image: 'https://picsum.photos/200',
         name: "CheckCheckCheckCheck",
         date: 0,
         price: 257,
@@ -74,7 +74,7 @@ const cards = [
     },
     {
         id: 8,
-        image: '',
+        image: 'https://picsum.photos/200',
         name: "CheckCheckCheckCheck",
         date: 0,
         price: 258,
@@ -82,7 +82,7 @@ const cards = [
     },
     {
         id: 9,
-        image: '',
+        image: 'https://picsum.photos/200',
         name: "CheckCheckCheckCheck",
         date: 0,
         price: 259,
@@ -90,7 +90,7 @@ const cards = [
     },
     {
         id: 10,
-        image: '',
+        image: 'https://picsum.photos/200',
         name: "CheckCheckCheckCheck",
         date: 0,
         price: 260,
@@ -98,7 +98,7 @@ const cards = [
     },
     {
         id: 11,
-        image: '',
+        image: 'https://picsum.photos/200',
         name: "CheckCheckCheckCheck",
         date: 0,
         price: 261,
@@ -106,7 +106,7 @@ const cards = [
     },
     {
         id: 12,
-        image: '',
+        image: 'https://picsum.photos/200',
         name: "CheckCheckCheckCheck",
         date: 0,
         price: 262,
@@ -114,7 +114,7 @@ const cards = [
     },
     {
         id: 13,
-        image: '',
+        image: 'https://picsum.photos/200',
         name: "CheckCheckCheckCheck",
         date: 0,
         price: 263,
@@ -122,7 +122,7 @@ const cards = [
     },
     {
         id: 14,
-        image: '',
+        image: 'https://picsum.photos/200',
         name: "CheckCheckCheckCheck",
         date: 0,
         price: 264,
@@ -130,7 +130,7 @@ const cards = [
     },
     {
         id: 15,
-        image: '',
+        image: 'https://picsum.photos/200',
         name: "CheckCheckCheckCheck",
         date: 0,
         price: 265,
@@ -141,7 +141,7 @@ const cards = [
 
 function AdsList() {
 
-    const [card, setCard] = useState([])
+    // const [card, setCard] = useState([])
     const [loading, setLoading] = useState(false)
     const [currentPage, setCurrentPage] = useState(1)
     const [cardsPerPage] = useState(5)
@@ -168,12 +168,12 @@ function AdsList() {
 
     const paginate = pageNumber => setCurrentPage(pageNumber)
     const nextPage = () => {
-        if(currentPage!=Math.ceil(cards.length / cardsPerPage)){
+        if(currentPage !== Math.ceil(cards.length / cardsPerPage)){
         setCurrentPage(prev => prev + 1)
         }
     }
     const prevPage = () => {
-        if(currentPage!=1){
+        if(currentPage !== 1){
         setCurrentPage(prev => prev - 1)
         }
     }

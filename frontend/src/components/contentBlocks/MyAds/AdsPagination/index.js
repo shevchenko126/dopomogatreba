@@ -11,13 +11,11 @@ function AdsPagination({ cardsPerPage, totalCards, paginate, prevPage, nextPage 
     }
 
 
-
     return (
         <div className="ads-dashboard d-flex flex-row justify-content-center mt-4 gap-3">
 
             <div className="page-btn">
-                <a href="!#" className="page-btn-link d-flex align-items-center justify-content-center" onClick={prevPage}>
-                    -1
+                <a href="!#" className="page-btn-link arrow-left d-flex align-items-center justify-content-center" onClick={prevPage}>
                 </a>
             </div>
 
@@ -35,8 +33,7 @@ function AdsPagination({ cardsPerPage, totalCards, paginate, prevPage, nextPage 
             </div>
 
             <div className="page-btn">
-                <a href="!#" className="page-btn-link d-flex align-items-center justify-content-center" onClick={nextPage}>
-                    +1
+                <a href="!#" className="page-btn-link arrow-right d-flex align-items-center justify-content-center" onClick={nextPage}>
                 </a>
             </div>
 
