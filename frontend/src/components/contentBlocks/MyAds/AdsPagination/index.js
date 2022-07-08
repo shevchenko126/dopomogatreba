@@ -2,7 +2,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import '../index.css'
 
 
-function AdsPagination({ cardsPerPage, totalCards, paginate }) {
+function AdsPagination({ cardsPerPage, totalCards, paginate, prevPage, nextPage }) {
 
     const pageNumbers = []
 
@@ -10,12 +10,18 @@ function AdsPagination({ cardsPerPage, totalCards, paginate }) {
         pageNumbers.push(i)
     }
 
-   
+
 
     return (
-        <div className="ads-pagination d-flex flex-row justify-content-center ">
+        <div className="ads-dashboard d-flex flex-row justify-content-center mt-4 gap-3">
 
-            <ul className="d-flex ">
+            <div className="page-btn">
+                <a href="!#" className="page-btn-link d-flex align-items-center justify-content-center" onClick={prevPage}>
+                    -1
+                </a>
+            </div>
+
+            <div className="d-flex">
                 {
                     pageNumbers.map(number => (
                         <li className="page-elem" key={number}>
@@ -25,7 +31,14 @@ function AdsPagination({ cardsPerPage, totalCards, paginate }) {
                         </li>
                     ))
                 }
-            </ul>
+
+            </div>
+
+            <div className="page-btn">
+                <a href="!#" className="page-btn-link d-flex align-items-center justify-content-center" onClick={nextPage}>
+                    +1
+                </a>
+            </div>
 
         </div>
 

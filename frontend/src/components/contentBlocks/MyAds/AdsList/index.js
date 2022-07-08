@@ -174,7 +174,9 @@ function AdsList() {
         <>
             <AdsNavBar />
             <AdsCard props={currentCard} loading={loading} />
-            <AdsPagination cardsPerPage={cardsPerPage} totalCards={cards.length} paginate={paginate} />
+            <AdsPagination cardsPerPage={cardsPerPage} totalCards={cards.length} 
+            paginate={paginate} prevPage={prevPage}
+            nextPage={nextPage} />
         </>
     )
 }
