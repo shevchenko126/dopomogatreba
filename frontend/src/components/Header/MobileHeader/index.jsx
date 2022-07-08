@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import "./MobileHeader.css";
-import "../Header/Header.css";
-import HeaderContentBlock from "../Header/HeaderContentBlock";
-import RecursiveMenu from "../UI/RecursiveMenu";
-import HeaderNavigateCategory from "../HeaderNavigate/HeaderNavigateCategory";
+import "../Header.css";
+import HeaderContentBlock from "../HeaderContentBlock";
+import RecursiveMenu from "../../UI/RecursiveMenu";
+import HeaderNavigateCategory from "../../HeaderNavigate/HeaderNavigateCategory";
 
 const MobileHeader = () => {
   const [isActive, setIsActive] = useState(false);

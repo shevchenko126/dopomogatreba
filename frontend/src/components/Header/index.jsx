@@ -2,7 +2,7 @@ import React from "react";
 
 import "./Header.css";
 import HeaderContentBlock from "./HeaderContentBlock";
-import MobileHeader from "../MobileHeader";
+import MobileHeader from "./MobileHeader";
 import HeaderLogo from "./HeaderLogo";
 
 const Header = () => {
