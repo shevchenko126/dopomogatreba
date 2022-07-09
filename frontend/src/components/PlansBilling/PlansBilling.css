@@ -73,21 +73,7 @@ span{
 .plans-billing-currentPlans-buttonsBlock_upgradeButton{
 
 }
-.plans-billing-currentPlans-buttonsBlock_upgradeButton button{
-  font-family: 'Nunito Sans', serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 50px;
-  align-items: center;
-  text-align: center;
-  text-transform: capitalize;
-  color:  #ffff;
-  background: #00AAFF;
-  border-radius: 4px;
-  padding: 0 20px;
-  border: 1px solid #00AAFF;
-}
+
 /**/
 /*CurrentPlansBenefits*/
 .plans-billing__currentPlansBenefits{

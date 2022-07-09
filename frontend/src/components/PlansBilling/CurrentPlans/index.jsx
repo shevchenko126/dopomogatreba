@@ -1,4 +1,5 @@
 import React from "react";
+import ButtonBlue from "../../UI/ButtonBlue";
 
 const CurrentPlans = () => {
   return (
@@ -21,7 +22,7 @@ const CurrentPlans = () => {
           <button>Cancel Plan</button>
         </div>
         <div className="plans-billing-currentPlans-buttonsBlock_upgradeButton">
-          <button>Upgrade Plan</button>
+          <ButtonBlue name={"Upgrade Plan"} />
         </div>
       </div>
     </div>
