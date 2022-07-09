@@ -14,7 +14,23 @@ const cards = [
         name: "CheckCheckCheckCheck",
         date: 0,
         price: 250,
-        status: true
+        status: true,
+        dropdownItems: [
+            {
+                name: 'View all details',
+                icon: 'Eye',
+                href: '#',
+            },
+            {
+                name: 'Mark it expire',
+                icon: 'XCircle',
+                href: '#'
+            },
+            {
+                name: 'Delete Ads',
+                href: '#'
+            }
+        ]
     },
     {
         id: 1,
@@ -134,7 +150,23 @@ const cards = [
         name: "CheckCheckCheckCheck",
         date: 0,
         price: 265,
-        status: false
+        status: false,
+        dropdownItems: [
+            {
+                name: 'View all details',
+                icon: 'Eye',
+                href: '#'
+            },
+            {
+                name: 'Mark it expire',
+                href: '#',
+                icon: 'XCircle',
+            },
+            {
+                name: 'Delete Ads',
+                href: '#',
+            }
+        ]
     }
 
 ]

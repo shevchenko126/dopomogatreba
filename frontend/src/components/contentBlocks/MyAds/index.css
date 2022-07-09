@@ -333,7 +333,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 4px;
+    justify-content: center;
+    gap: 12px;
     text-decoration: none;
     background: #FFFFFF;
     font-weight: 400;
@@ -343,6 +344,7 @@ body {
     width: 200px;
     height: 36px;
     color: #464D61;
+    padding: 0 12px;
 }
 
 .dropdown a:hover {
@@ -351,6 +353,10 @@ body {
     height: 36px;
     background: #E8F7FF;
     border-radius: 4px;
+}
+
+.dropdown a:hover > .dropdown-icon {
+    background-color: #00AAFF;
 }
 
 .show {
@@ -377,7 +383,6 @@ body {
 }
 
 .page-btn-link {
-
     width: 48px;
     height: 48px;
     border-radius: 4px;
@@ -461,6 +466,39 @@ body {
     background-color: #00AAFF;
 }
 
+.dropdown-icon {
+    justify-content: center;
+    align-items: center;
+    background-color: #767E94;
+    display: inline-block;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    width: 20px;
+
+}
+
+.Eye {
+    height: 20px;
+    
+    -webkit-mask: url(../../../../public/icons/Eye.svg) no-repeat 50% 50%;
+    mask: url(../../../../public/icons/Eye.svg) no-repeat 50% 50%;
+}
+
+.Trash {
+    width: 20px;
+    height: 20px;
+    
+    -webkit-mask: url(../../../../public/icons/Trash.svg) no-repeat 50% 50%;
+    mask: url(../../../../public/icons/Trash.svg) no-repeat 50% 50%;
+}
+
+.XCircle {
+    width: 20px;
+    height: 20px;
+    
+    -webkit-mask: url(../../../../public/icons/XCircle.svg) no-repeat 50% 50%;
+    mask: url(../../../../public/icons/XCircle.svg) no-repeat 50% 50%;
+}
 
 @media only screen and (min-width: 1200px) {
     /* Стили для устройств с большой шириной экрана >1200px */
@@ -662,8 +700,11 @@ body {
         scroll-behavior: smooth;
     }
 
-    .dropdown-content {
+    .search-block.dropdown-content {
         top: 125px;
+    }
+
+    .dropdown-content {
         width: 100%;
         height: max-content;
     }

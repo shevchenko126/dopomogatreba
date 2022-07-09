@@ -1,5 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import '../../index.css'
+import AdsCardDropdown from './AdsCardDropdown';
 
 function AdsCard( { props, loading } ) {
 
@@ -7,7 +8,7 @@ function AdsCard( { props, loading } ) {
         return <h2>Loading...</h2>
     }
 
-    console.log(props)
+    // console.log(props)
     return (
         <div className="ads-dashboard d-flex flex-column justify-content-start align-items-start">
                 {props.map((card) => (
@@ -23,20 +24,7 @@ function AdsCard( { props, loading } ) {
                             <div className={card.status ? "ads__card__activity active" : "ads__card__activity expire"}></div>
                             <div className="ads__card__buttons">
                                 <button className="ads__card__edit" title="Edit">Edit</button>
-                                <div className="dropdown">
-                                    <button className="ads__drop__button" title="More"></button>
-                                    <div className="dropdown-content">
-                                        <a className="d-flex flex-row justify-content-start align-items-center" href="https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/HEAD/docs/rules/anchor-is-valid.md">
-                                            View Ads Details
-                                        </a>
-                                        <a className="d-flex flex-row justify-content-start align-items-center" href="https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/HEAD/docs/rules/anchor-is-valid.md">
-                                            Mark it Expire
-                                        </a>
-                                        <a className="d-flex flex-row justify-content-start align-items-center" href="https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/HEAD/docs/rules/anchor-is-valid.md">
-                                            Delete Ads
-                                        </a>
-                                    </div>
-                                </div>
+                                <AdsCardDropdown props={card.dropdownItems} />
                             </div>
                         </div>
                 ))}

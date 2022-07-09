@@ -5,10 +5,6 @@ import SearchSelectDropdownMax from './SearchSelectDropDownMax';
 import SearchSelectDropdownMin from './SearchSelectDropDownMin';
 
 function SearchSelectDropdownMenu({ props }) {
-    console.log('propsmenu', props)
-
-    console.log(useScreenSize())
-
     function useScreenSize() {
         const [windowSize, setWindowSize] = useState(getWindowSize());
 
@@ -21,7 +17,6 @@ function SearchSelectDropdownMenu({ props }) {
                 window.removeEventListener('resize', handleWindowResize);
             };
         }, []);
-
         return (windowSize)
     }
 
