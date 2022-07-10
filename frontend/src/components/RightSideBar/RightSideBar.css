@@ -1,0 +1,154 @@
+.rightSideBar{
+  width: 424px;
+  background: #FFFFFF;
+  border: 1px solid #EBEEF7;
+  border-radius: 12px;
+}
+.rightSideBar__priceBlock{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #EBEEF7;
+}
+.rightSideBar-priceBlock__price{
+  margin: 36px 0 36px 32px;
+}
+.rightSideBar-priceBlock__price span{
+  font-family: 'Nunito Sans', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 40px;
+  color: #191F33;
+}
+.rightSideBar-priceBlock__like{
+  margin: 25px 25px 25px 0;
+  cursor: pointer;
+}
+.rightSideBar__phoneBlock{
+  border-bottom: 1px solid #EBEEF7;
+}
+.rightSideBar-phoneBlock__phoneNumber{
+  display: flex;
+  flex-direction: column;
+  margin: 33px 33px 16px;
+  background: #F5F7FA;
+  border-radius: 8px;
+}
+.rightSideBar-phoneBlock__phoneNumber span{
+  font-family: 'Nunito', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #636A80;
+  margin: 0 20px 20px;
+}
+.rightSideBar-phoneBlock-phoneNumber__number{
+  margin: 20px 46px 12px 25px;
+}
+.rightSideBar-phoneBlock-phoneNumber__number span{
+  font-family: 'Nunito', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  color: #191F33;
+  margin-left: 16px;
+}
+.rightSideBar-phoneBlock__button{
+  margin: 0 32px 32px;
+}
+.rightSideBar-phoneBlock__button button{
+  font-family: 'Nunito Sans', serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 50px;
+  align-items: center;
+  text-align: center;
+  text-transform: capitalize;
+  color:  #ffff;
+  background: #00AAFF;
+  border-radius: 4px;
+  padding: 0 20px;
+  border: 1px solid #00AAFF;
+  width: 100%;
+}
+.buttonBlue img{
+  margin-right: 8px;
+}
+.rightSideBar__sellerBlock{
+  border-bottom: 1px solid #EBEEF7;
+}
+.rightSideBar-sellerBlock__seller{
+  display: flex;
+  margin: 32px 0 24px 32px;
+}
+.rightSideBar-sellerBlock-seller__avatar{
+  margin-right: 16px;
+}
+.rightSideBar-sellerBlock-seller__info{
+
+}
+.rightSideBar-sellerBlock-seller-info__addBy span{
+  font-family: 'Nunito', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #767E94;
+}
+.rightSideBar-sellerBlock-seller-info__name span{
+  font-family: 'Nunito', serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #191F33;
+}
+.rightSideBar-sellerBlock__infoBlock{
+  margin:0 0 32px 32px;
+}
+.rightSideBar-sellerBlock__infoBlock img{
+  margin-right: 12px;
+}
+.rightSideBar-sellerBlock__infoBlock span{
+  font-family: 'Nunito', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #636A80;
+}
+.rightSideBar-sellerBlock-infoBlock__address{
+  margin: 16px 0;
+}
+.rightSideBar__locationBlock{
+  padding: 32px;
+}
+.rightSideBar-locationBlock__title{
+  margin-bottom: 18px;
+}
+.rightSideBar-locationBlock__title span{
+  font-family: 'Nunito', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  color: #191F33;
+}
+.rightSideBar-locationBlock__map{
+  position: relative;
+}
+.rightSideBar-locationBlock-map__img{
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  background-position: 50% 50%;
+}
+
+
+
+
+
