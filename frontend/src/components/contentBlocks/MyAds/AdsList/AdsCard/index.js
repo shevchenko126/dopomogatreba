@@ -8,7 +8,6 @@ function AdsCard( { props, loading } ) {
         return <h2>Loading...</h2>
     }
 
-    // console.log(props)
     return (
         <div className="ads-dashboard d-flex flex-column justify-content-start align-items-start">
                 {props.map((card) => (
@@ -20,8 +19,8 @@ function AdsCard( { props, loading } ) {
                                 <div className="ads__card__name">{card.name}</div>
                             </div>
                             <div className="ads__card__date">{card.date}</div>
-                            <div className="ads__card__price">{card.price}</div>
-                            <div className={card.status ? "ads__card__activity active" : "ads__card__activity expire"}></div>
+                            <div className="ads__card__price">{'\u20B4'}{card.price}</div>
+                            <div className={card.status ? "ads__card__activity active" : "ads__card__activity expire"}>{card.status ? "Active" : "Expire"}</div>
                             <div className="ads__card__buttons">
                                 <button className="ads__card__edit" title="Edit">Edit</button>
                                 <AdsCardDropdown props={card.dropdownItems} />

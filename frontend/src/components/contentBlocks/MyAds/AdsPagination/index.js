@@ -2,7 +2,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import '../index.css'
 
 
-function AdsPagination({ cardsPerPage, totalCards, paginate, prevPage, nextPage }) {
+function AdsPagination({ cardsPerPage, totalCards, paginate, prevPage, nextPage, currentPage }) {
 
     const pageNumbers = []
 
@@ -11,33 +11,37 @@ function AdsPagination({ cardsPerPage, totalCards, paginate, prevPage, nextPage 
     }
 
 
-    return (
-        <div className="ads-dashboard d-flex flex-row justify-content-center mt-4 gap-3">
 
-            <div className="page-btn">
-                <a href="!#" className="page-btn-link arrow-left d-flex align-items-center justify-content-center" onClick={prevPage}>
-                </a>
-            </div>
+    return (
+        <div className="ads-pagination d-flex flex-row justify-content-center mt-4 gap-3">
+            {currentPage !== pageNumbers[0] &&
+                <div className="page-btn">
+                    <div className="page-btn-link arrow-left d-flex align-items-center justify-content-center" onClick={prevPage}>
+                    </div>
+                </div>
+            }
 
             <div className="d-flex">
                 {
-                    pageNumbers.map(number => (
-                        <li className="page-elem" key={number}>
-                            <a href="!#" className="page-link d-flex align-items-center justify-content-center" onClick={() => paginate(number)}>
-                                {number}
-                            </a>
+                    pageNumbers.map((number, key) => (
+                        <li className={currentPage === number ? "page-elem current" : "page-elem"} key={number}>
+                            <div className="page-link d-flex align-items-center justify-content-center" onClick={() => paginate(number)}>
+                                {(number > 9) ? `${number}` : `0${number}`}
+                            </div>
                         </li>
                     ))
                 }
-
             </div>
 
-            <div className="page-btn">
-                <a href="!#" className="page-btn-link arrow-right d-flex align-items-center justify-content-center" onClick={nextPage}>
-                </a>
-            </div>
+            {currentPage !== pageNumbers.length &&
+                <div className="page-btn">
+                    <div className="page-btn-link arrow-right d-flex align-items-center justify-content-center" onClick={nextPage}>
+                    </div>
+                </div>
+            }
 
-        </div>
+
+        </div >
 
 
     )

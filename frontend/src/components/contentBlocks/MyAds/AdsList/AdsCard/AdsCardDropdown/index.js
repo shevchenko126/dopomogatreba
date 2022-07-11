@@ -6,7 +6,6 @@ import React, { useRef, useEffect } from "react";
 function AdsCardDropdown({ props }) {
     const wrapperRef = useRef(null);
     useCloseDrops(wrapperRef);
-    console.log(props)
 
     function useCloseDrops(ref) {
         useEffect(() => {
@@ -19,14 +18,13 @@ function AdsCardDropdown({ props }) {
                         var openDropdown = dropdowns[i];
                         if (openDropdown.classList.contains('show') && dropdowns[i].previousElementSibling !== event.target) {
                             openDropdown.classList.remove('show');
-                            console.log('prev', openDropdown.previousElementSibling)
                             openDropdown.previousElementSibling.classList.remove("opened")
+                            openDropdown.parentElement.parentElement.parentElement.classList.remove('opened')
                         }
                     }
                 }
                 else if (ref.current && ref.current.contains(event.target)) {
                     if (event.target.tagName === "BUTTON") {
-                        console.log(event.target.nextElementSibling)
                         event.target.nextElementSibling.classList.toggle("show")
                     }
 
@@ -43,18 +41,20 @@ function AdsCardDropdown({ props }) {
             };
         }, [ref]);
     }
+
+    const highlightCard = (event) => {
+        event.target.parentElement.parentElement.parentElement.classList.toggle('opened')
+    }
     return (
         <>
             <div className="dropdown">
-                {/* <button ref={wrapperRef} className="search__dropdown__select" title={props.name}>{props.name}</button>
-                <div className="dropdown-content">
-                    {
-                        props.links.map(({ name, href }, key) => {
-                            return <a key={key} href={href}>{name}</a>
-                        })
-                    } 
-                </div> */}
-                <button ref={wrapperRef} className="ads__drop__button" title="More"></button>
+                <button
+                    type='button'
+                    disabled={props && props.length > 0 ? false : true}
+                    ref={wrapperRef}
+                    className="ads__drop__button"
+                    title="More"
+                    onClick={(e) => highlightCard(e)}></button>
                 <div className="dropdown-content">
 
                     {props &&

@@ -25,7 +25,6 @@ function SearchSelectDropdownMin({ props }) {
                     }
                 }
                 else if (ref.current && ref.current.contains(event.target)) {
-                    console.log(event.target.tagName)
                     if (event.target.tagName === "BUTTON") {
                         event.target.parentElement.nextElementSibling.classList.toggle("show")
                     }
@@ -43,18 +42,18 @@ function SearchSelectDropdownMin({ props }) {
         }, [ref]);
     }
     return (
-        <>
-            <div className="dropdown">
-                <button ref={wrapperRef} className="search__dropdown__select" title={props.name}>{props.name}</button>
+            <div>
+                <div className="dropdown">
+                    <button ref={wrapperRef} className="search__dropdown__select" title={props.name}>{props.name}</button>
+                </div>
+                <div className="dropdown-content">
+                    {
+                        props.links.map(({ name, href }, key) => {
+                            return <a key={key} href={href}>{name}</a>
+                        })
+                    }
+                </div>
             </div>
-            <div className="dropdown-content">
-                {
-                    props.links.map(({ name, href }, key) => {
-                        return <a key={key} href={href}>{name}</a>
-                    })
-                }
-            </div>
-        </>
     )
 
 }

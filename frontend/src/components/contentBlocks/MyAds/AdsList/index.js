@@ -38,7 +38,23 @@ const cards = [
         name: "CheckCheckCheckCheck",
         date: 0,
         price: 251,
-        status: false
+        status: false,
+        dropdownItems: [
+            {
+                name: 'View all details',
+                icon: 'Eye',
+                href: '#',
+            },
+            {
+                name: 'Mark it expire',
+                icon: 'XCircle',
+                href: '#'
+            },
+            {
+                name: 'Delete Ads',
+                href: '#'
+            }
+        ]
     },
     {
         id: 2,
@@ -216,7 +232,7 @@ function AdsList() {
             <AdsCard props={currentCard} loading={loading} />
             <AdsPagination cardsPerPage={cardsPerPage} totalCards={cards.length} 
             paginate={paginate} prevPage={prevPage}
-            nextPage={nextPage} />
+            nextPage={nextPage} currentPage={currentPage} />
         </>
     )
 }

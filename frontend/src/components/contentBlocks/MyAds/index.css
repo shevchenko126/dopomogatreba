@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
-    /* margin: 20px; */
     margin: 0;
     padding: 0;
     font-family: 'Nunito', sans-serif;
@@ -17,7 +16,6 @@ body {
 
 .search-block {
     width: 100%;
-    /* height: 56px; */
     padding: 0px;
     gap: 27px;
     font-size: 14px;
@@ -54,6 +52,7 @@ body {
     position: relative;
     overflow: hidden;
     box-sizing: border-box;
+    text-align: left;
 
     width: 170px;
     height: 44px;
@@ -92,7 +91,6 @@ body {
     margin: 32px 0px 20px;
     gap: 24px;
 
-    /* Grayscale/White */
     background: #FFFFFF;
     box-shadow: inset 0px -1px 0px #EBEEF7;
 }
@@ -107,6 +105,15 @@ body {
     width: 100%;
 }
 
+
+.ads-pagination {
+    width: 100%;
+}
+
+.ads-pagination * {
+    cursor: pointer;
+}
+
 .ads__card {
     padding: 12px;
     gap: 24px;
@@ -117,6 +124,10 @@ body {
     top: 52px;
 
     border-radius: 12px;
+}
+
+.ads__card.opened {
+    box-shadow: 0px 12px 80px rgba(0, 26, 102, 0.1);
 }
 
 .ads__card__info {
@@ -187,42 +198,36 @@ body {
 
 }
 
-.ads__card__price::before {
-    content: "$";
-}
-
 .ads__card__activity {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: flex-start;
 
     width: 132px;
     height: 20px;
 }
 
-.active::after {
-    padding-left: 8px;
-    width: 40px;
-    height: 20px;
+.ads__card__activity::before {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+}
 
+.ads__card__activity.active {
+    height: 20px;
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
     color: #27C200;
-    content: "Active";
 }
 
-.active::before {
-    width: 18px;
-    height: 18px;
+.ads__card__activity.active::before {
     content: url(../../../../public/icons/Check.svg);
 }
 
-.expire::after {
-    padding-left: 8px;
-    width: 40px;
+.ads__card__activity.expire {
     height: 20px;
-
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
@@ -230,9 +235,7 @@ body {
     content: "Expire";
 }
 
-.expire::before {
-    width: 18px;
-    height: 18px;
+.ads__card__activity.expire::before {
     content: url(../../../../public/icons/X.svg);
 }
 
@@ -253,10 +256,8 @@ body {
     width: 102px;
     height: 50px;
     border: 0;
-    /* color: #F5F7FA; */
     border-radius: 4px;
 
-    /* padding-left: 52px; */
     padding: 0 20px 0 52px;
 
     font-family: 'Nunito Sans';
@@ -291,16 +292,40 @@ body {
     border: none;
 
     background-color: #F5F7FA;
-    background-image: url(../../../../public/icons/DotsThree.svg);
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
+
 }
 
-.ads__drop__button:hover,
-.ads__drop__button.opened {
-    background-image: url(../../../../public/icons/DotsThree-active.svg);
+
+.ads__drop__button::after {
+    content: '';
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    width: 50px;
+    height: 50px;
+    -webkit-mask: url(../../../../public/icons/DotsThree.svg) no-repeat 50% 50%;
+    mask: url(../../../../public/icons/DotsThree.svg) no-repeat 50% 50%;
+    background-color: #464D61;
+}
+
+.ads__drop__button:disabled::after {
+    background-color: #DADDE5;
+}
+
+.ads__drop__button:disabled {
+    cursor: unset;
+}
+
+.ads__drop__button:not(:disabled):hover,
+.ads__drop__button:not(:disabled).opened {
     background-color: #00AAFF;
+}
+
+.ads__drop__button:not(:disabled):hover::after,
+.ads__drop__button:not(:disabled).opened::after {
+    background-color: #fff;
 }
 
 .dropdown {
@@ -355,7 +380,7 @@ body {
     border-radius: 4px;
 }
 
-.dropdown a:hover > .dropdown-icon {
+.dropdown a:hover>.dropdown-icon {
     background-color: #00AAFF;
 }
 
@@ -398,18 +423,14 @@ body {
     list-style-type: none;
 }
 
-.page-elem:hover {
+.page-elem:hover>.page-link {
     background: #EBEEF7;
-    border-radius: 4px;
+    color: #191F33;
 }
 
-.page-link:hover {
-    color: #000000
-}
-
-/* there will be if pressed (i dn`t know how to)*/
-.page-elem:focus {
+.page-elem.current>.page-link {
     background: #00AAFF;
+    color: #FFFFFF;
 }
 
 .page-link {
@@ -479,7 +500,7 @@ body {
 
 .Eye {
     height: 20px;
-    
+
     -webkit-mask: url(../../../../public/icons/Eye.svg) no-repeat 50% 50%;
     mask: url(../../../../public/icons/Eye.svg) no-repeat 50% 50%;
 }
@@ -487,7 +508,7 @@ body {
 .Trash {
     width: 20px;
     height: 20px;
-    
+
     -webkit-mask: url(../../../../public/icons/Trash.svg) no-repeat 50% 50%;
     mask: url(../../../../public/icons/Trash.svg) no-repeat 50% 50%;
 }
@@ -495,7 +516,7 @@ body {
 .XCircle {
     width: 20px;
     height: 20px;
-    
+
     -webkit-mask: url(../../../../public/icons/XCircle.svg) no-repeat 50% 50%;
     mask: url(../../../../public/icons/XCircle.svg) no-repeat 50% 50%;
 }
@@ -508,8 +529,6 @@ body {
     /* Стили для устройств с маленьким экраном, размерами 768px - 1199px (планшеты и подобные) */
 
     .search-block {
-        /* max-width: 578px;
-        font-size: 10px; */
         max-width: 100%;
         font-size: 13px;
     }
@@ -531,26 +550,22 @@ body {
     }
 
     .ads-dashboard {
-        /* width: 581px; */
         width: 100%;
 
     }
 
     .ads-navigation {
-        /* width: 578px; */
         width: 100%;
         height: 40px;
     }
 
     .ads__card {
-        /* width: 581px; */
         width: 100%;
         height: 104px;
         gap: 5px;
     }
 
     .ads__card__info {
-        /* width: 190px; */
         width: 36.936%;
         height: 79px;
         gap: 4px;
@@ -573,7 +588,6 @@ body {
     }
 
     .ads__card__date {
-        /* width: 80px; */
         width: 14.864%;
         height: 20px;
         font-size: 12px;
@@ -586,13 +600,8 @@ body {
         font-size: 12px;
     }
 
-    .ads__card__price::before {
-        content: "$";
-    }
-
     .ads__card__activity {
         width: 14.864%;
-        /* width: 60px; */
     }
 
     .active::after {
@@ -614,9 +623,7 @@ body {
     }
 
     .ads__card__buttons {
-        /* width: 18.472%; */
         width: 150px;
-        /* width: fit-content + 24px; */
         height: 35px;
         margin-left: 24px;
     }
@@ -637,18 +644,21 @@ body {
 
     .ads__drop__button {
         width: 35px;
-        /* width: 100%; */
         height: 35px;
-        background-size: 11px, 11px;
+    }
+
+    .ads__drop__button::after {
+        width: 35px;
+        height: 35px;
     }
 
     .ads__drop__button:hover,
     .ads__drop__button.opened {
-        background-size: 11px, 11px;
+        width: 35px;
+        height: 35px;
     }
 
     .dropdown-content {
-        /* width: 100%; */
         width: 250px;
         height: max-content;
         gap: 15px;
@@ -685,8 +695,6 @@ body {
 
 /* @media screen and (min-width: 320px) and (max-width:576px) { */
 @media only screen and (max-width:640px) {
-
-
     /* Styles for devices with the smallest width 320px - 567px (smartphones) */
     /* Styles for ads list and ads cards */
 
@@ -731,6 +739,8 @@ body {
     }
 
     .ads__card__buttons {
+        border-top: 2px solid #F5F7FA;
+        padding: 10px 0px 0px;
         justify-content: space-evenly;
         width: 100%;
     }
