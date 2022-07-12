@@ -15,6 +15,7 @@ body {
 }
 
 .search-block {
+    max-width: 984px;
     width: 100%;
     padding: 0px;
     gap: 27px;
@@ -107,6 +108,7 @@ body {
 
 
 .ads-pagination {
+    max-width: 984px;
     width: 100%;
 }
 

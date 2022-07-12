@@ -55,7 +55,7 @@ const filters = [
 
 function SearchBar() {
     return (
-        <div className="search-block d-flex flex-md-row flex-column justify-content-between align-items-center p-1">
+        <div class="search-block d-flex flex-md-row flex-column justify-content-between align-items-center p-1">
             <SearchInput placeholder='Ads tittle, keyword' />
             <SearchSelectDropdownMenu props={filters} />
         </div>
