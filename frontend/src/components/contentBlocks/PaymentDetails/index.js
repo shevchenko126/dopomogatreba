@@ -25,13 +25,15 @@ const PaymentDetails = () => {
                 keyboard={false}
             >
                 <Modal.Header closeButton>
-                    <Modal.Title>Modal title</Modal.Title>
+                    <Modal.Title>Payment Details</Modal.Title>
                 </Modal.Header>
-                <Modal.Body>
-                    I will not close if you click outside me. Don't even try to press
-                    escape key.
-                    
-                    отут будет все 
+                <Modal.Body className='d-flex flex-column'>
+                    <label htmlFor='nameOnCard'>Name on Card</label>
+                    <input
+                        type='text'
+                        id='nameOnCard'
+                        placeholder='Adress line 01'
+                    ></input>
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleClose}>
