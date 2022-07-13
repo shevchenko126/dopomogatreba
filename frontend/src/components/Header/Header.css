@@ -54,49 +54,12 @@
   justify-content: flex-end;
 
 }
-
-
-.header-buttons__postAds{
-}
-.header-buttons-signIn__button{
-  background-color: #E8F7FF;
-  color: #00AAFF;
+.header-buttons__signIn{
   margin-right: 12px;
-  width: 92px;
-  height: 50px;
-  border-radius: 4px;
-  font-family: 'Nunito Sans', serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 1rem;
-  line-height: 50px;
-  border: 0;
 }
-
-
 .header-buttons__postAds{
-  position: relative;
-  cursor: pointer;
 }
-.header-buttons-postAds__img{
-  position: absolute;
-  top: 13px;
-  left: 20px;
-}
-.header-buttons-postAds__button{
-  background: #00AAFF;
-  color: #FFFFFF;
-  font-family: 'Nunito Sans', serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 1rem;
-  line-height: 50px;
-  border: 0;
-  width: 139px;
-  height: 50px;
-  border-radius: 4px;
-  padding-left: 40px;
-}
+
 @media (min-width: 1200px){
   .mobileHeader{
     display: none;

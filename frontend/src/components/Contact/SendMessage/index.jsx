@@ -1,5 +1,5 @@
 import React from "react";
-import ButtonBlue from "../../UI/ButtonBlue";
+import ButtonBlue from "../../UI/Buttons/ButtonBlue";
 
 const SendMessage = () => {
   return (

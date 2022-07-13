@@ -5,7 +5,7 @@ span{
   font-family: 'Nunito', serif;
   font-style: normal;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 24px;
 }
 .plans-billing__currentPlans,
@@ -40,7 +40,7 @@ span{
   font-family: 'Nunito Sans', serif;
   font-style: normal;
   font-weight: 600;
-  font-size: 40px;
+  font-size: 2.5rem;
   line-height: 48px;
 }
 .plans-billing-currentPlans-infoBlock__subscriptionDate span{
@@ -58,7 +58,7 @@ span{
   font-family: 'Nunito Sans', serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 50px;
   align-items: center;
   text-align: center;
@@ -85,7 +85,7 @@ span{
   font-family: 'Nunito', serif;
   font-style: normal;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 24px;
 }
 .plans-billing-currentPlansBenefits__plansItems{
@@ -108,7 +108,7 @@ input[type="checkbox"] {
   font-family: 'Nunito', serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 20px;
   color: #636A80;
   margin-left: 8px;
@@ -132,7 +132,7 @@ input[type="checkbox"] {
   font-family: 'Nunito', serif;
   font-style: normal;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 24px;
   color: #191F33;
 }
@@ -140,7 +140,7 @@ input[type="checkbox"] {
   font-family: 'Nunito', serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 36px;
   color: #191F33;
   margin: 0;
@@ -152,7 +152,7 @@ input[type="checkbox"] {
   font-family: 'Nunito', serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 20px;
   color: #464D61;
 }
@@ -160,7 +160,7 @@ input[type="checkbox"] {
   font-family: 'Nunito', serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 20px;
   color: #939AAD;
 }
@@ -174,7 +174,7 @@ input[type="checkbox"] {
   font-family: 'Nunito', serif;
   font-style: normal;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 24px;
   color: #191F33;
   margin-bottom: 30px;
@@ -193,7 +193,7 @@ input[type="checkbox"] {
   font-family: 'Nunito', serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 36px;
   color: #191F33;
 }
@@ -209,7 +209,7 @@ input[type="checkbox"] {
   font-family: 'Nunito', serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 20px;
   color: #464D61;
 }
@@ -217,7 +217,7 @@ input[type="checkbox"] {
   font-family: 'Nunito', serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 20px;
   color: #939AAD;
 }
@@ -231,7 +231,7 @@ input[type="checkbox"] {
   font-family: 'Nunito Sans', serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 50px;
   color: #00AAFF;
   background: #ffff;
@@ -253,7 +253,7 @@ input[type="checkbox"] {
   font-family: 'Nunito', serif;
   font-style: normal;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 24px;
   color: #191F33;
   margin-bottom: 16px;
@@ -265,7 +265,7 @@ input[type="checkbox"] {
   font-family: 'Nunito', serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 20px;
   color: #939AAD;
   border-bottom: 1px solid rgba(147, 154, 173, 0.3);
@@ -276,7 +276,7 @@ input[type="checkbox"] {
   font-family: 'Nunito', serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 20px;
   color: #464D61;
   margin-bottom: 25px;
