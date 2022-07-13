@@ -9,10 +9,10 @@ const cards = [
     {
         id: 0,
         image: 'https://picsum.photos/200',
-        name: "CheckCheckCheckCheck",
+        name: "mel",
         date: '12.06.2003',
         price: 250,
-        status: true,
+        status: "active",
         dropdownItems: [
             {
                 name: 'View all details',
@@ -33,10 +33,10 @@ const cards = [
     {
         id: 1,
         image: 'https://picsum.photos/200',
-        name: "CheckCheckCheckCheck",
+        name: "veronika",
         date: 0,
         price: 251,
-        status: false,
+        status: "expire",
         dropdownItems: [
             {
                 name: 'View all details',
@@ -50,41 +50,42 @@ const cards = [
             },
             {
                 name: 'Delete Ads',
-                href: '#'
+                href: '#',
+                icon: 'Trash'
             }
         ]
     },
     {
         id: 2,
         image: 'https://picsum.photos/200',
-        name: "CheckCheckCheckCheck",
+        name: "Veron",
         date: 0,
         price: 252,
-        status: false
+        status: "expire"
     },
     {
         id: 3,
         image: 'https://picsum.photos/200',
-        name: "CheckCheckCheckCheck",
+        name: "vEroNikA",
         date: 0,
         price: 253,
-        status: false
+        status: "expire"
     },
     {
         id: 4,
         image: 'https://picsum.photos/200',
-        name: "CheckCheckCheckCheck",
+        name: "Yehor",
         date: 0,
         price: 254,
-        status: false
+        status: "expire"
     },
     {
         id: 5,
         image: 'https://picsum.photos/200',
-        name: "CheckCheckCheckCheck",
+        name: "YeHor",
         date: 0,
         price: 255,
-        status: false
+        status: "expire"
     },
     {
         id: 6,
@@ -92,7 +93,7 @@ const cards = [
         name: "CheckCheckCheckCheck",
         date: 0,
         price: 256,
-        status: false
+        status: "expire"
     },
     {
         id: 7,
@@ -100,7 +101,7 @@ const cards = [
         name: "CheckCheckCheckCheck",
         date: 0,
         price: 257,
-        status: false
+        status: "expire"
     },
     {
         id: 8,
@@ -108,7 +109,7 @@ const cards = [
         name: "CheckCheckCheckCheck",
         date: 0,
         price: 258,
-        status: false
+        status: "expire"
     },
     {
         id: 9,
@@ -116,7 +117,7 @@ const cards = [
         name: "CheckCheckCheckCheck",
         date: 0,
         price: 259,
-        status: false
+        status: "expire"
     },
     {
         id: 10,
@@ -124,7 +125,7 @@ const cards = [
         name: "CheckCheckCheckCheck",
         date: 0,
         price: 260,
-        status: false
+        status: "expire"
     },
     {
         id: 11,
@@ -132,7 +133,7 @@ const cards = [
         name: "CheckCheckCheckCheck",
         date: 0,
         price: 261,
-        status: false
+        status: "expire"
     },
     {
         id: 12,
@@ -140,7 +141,7 @@ const cards = [
         name: "CheckCheckCheckCheck",
         date: 0,
         price: 262,
-        status: false
+        status: "expire"
     },
     {
         id: 13,
@@ -148,7 +149,7 @@ const cards = [
         name: "CheckCheckCheckCheck",
         date: 0,
         price: 263,
-        status: false
+        status: "active"
     },
     {
         id: 14,
@@ -156,7 +157,7 @@ const cards = [
         name: "CheckCheckCheckCheck",
         date: 0,
         price: 264,
-        status: false
+        status: "active"
     },
     {
         id: 15,
@@ -164,7 +165,7 @@ const cards = [
         name: "CheckCheckCheckCheck",
         date: 0,
         price: 265,
-        status: false,
+        status: "expire",
         dropdownItems: [
             {
                 name: 'View all details',
@@ -188,7 +189,7 @@ const cards = [
         name: "CheckCheckCheckCheck",
         date: 0,
         price: 266,
-        status: false
+        status: "expire"
     },
     {
         id: 17,
@@ -196,7 +197,7 @@ const cards = [
         name: "CheckCheckCheckCheck",
         date: 0,
         price: 267,
-        status: false
+        status: "expire"
     },
     {
         id: 18,
@@ -204,7 +205,7 @@ const cards = [
         name: "CheckCheckCheckCheck",
         date: 0,
         price: 268,
-        status: false
+        status: "expire"
     },
     {
         id: 19,
@@ -212,7 +213,7 @@ const cards = [
         name: "CheckCheckCheckCheck",
         date: 0,
         price: 269,
-        status: false
+        status: "expire"
     },
     {
         id: 20,
@@ -220,7 +221,7 @@ const cards = [
         name: "CheckCheckCheckCheck",
         date: 0,
         price: 270,
-        status: false
+        status: "expire"
     },
     {
         id: 21,
@@ -228,7 +229,7 @@ const cards = [
         name: "CheckCheckCheckCheck",
         date: 0,
         price: 271,
-        status: false
+        status: "expire"
     },
     {
         id: 22,
@@ -236,7 +237,7 @@ const cards = [
         name: "CheckCheckCheckCheck",
         date: 0,
         price: 272,
-        status: false
+        status: "expire"
     },
     {
         id: 23,
@@ -244,7 +245,7 @@ const cards = [
         name: "CheckCheckCheckCheck",
         date: 0,
         price: 273,
-        status: false
+        status: "expire"
     },
     {
         id: 24,
@@ -252,7 +253,7 @@ const cards = [
         name: "CheckCheckCheckCheck",
         date: 0,
         price: 274,
-        status: false
+        status: "expire"
     },
     {
         id: 25,
@@ -260,7 +261,7 @@ const cards = [
         name: "CheckCheckCheckCheck",
         date: 0,
         price: 275,
-        status: false
+        status: "expire"
     },
     {
         id: 26,
@@ -268,7 +269,7 @@ const cards = [
         name: "CheckCheckCheckCheck",
         date: 0,
         price: 276,
-        status: false
+        status: "expire"
     },
     {
         id: 27,
@@ -276,7 +277,7 @@ const cards = [
         name: "CheckCheckCheckCheck",
         date: 0,
         price: 277,
-        status: false
+        status: "expire"
     },
     {
         id: 28,
@@ -284,7 +285,7 @@ const cards = [
         name: "CheckCheckCheckCheck",
         date: 0,
         price: 278,
-        status: false
+        status: "expire"
     },
     {
         id: 29,
@@ -292,7 +293,7 @@ const cards = [
         name: "CheckCheckCheckCheck",
         date: 0,
         price: 279,
-        status: false
+        status: "expire"
     },
     {
         id: 30,
@@ -300,36 +301,40 @@ const cards = [
         name: "CheckCheckCheckCheck",
         date: 0,
         price: 280,
-        status: false
+        status: "expire"
     }
-
-
 ]
 
 function MyAds() {
 
-    const [profileData, setprofileData] = useState([
-        {
-            name: "Brian Kernighan",
-            email: "brian@test.com",
-            password: "password1",
-            skills: ["AWK", "AMPL", "Unix"]
-        },
-        {
-            name: "Max Kanat-Alexander",
-            email: "max@test.com",
-            password: "password1",
-            skills: ["Java", "Perl", "Apache", "Python"]
-        },
-        {
-            name: "Spruce Emmanuel",
-            email: "new@test.com",
-            password: "password1",
-            skills: ["JavaScript", "Perl", "Apache", "Node.js"]
-        }
-    ]);
+    const [profileData, setprofileData] = useState(cards);
+
+    /* {
+        id: 0,
+        image: 'https://picsum.photos/200',
+        name: "CheckCheckCheckCheck",
+        date: '12.06.2003',
+        price: 250,
+        status: "active",
+        dropdownItems: [
+            {
+                name: 'View all details',
+                icon: 'Eye',
+                href: '#',
+            },
+            {
+                name: 'Mark it expire',
+                icon: 'XCircle',
+                href: '#'
+            },
+            {
+                name: 'Delete Ads',
+                href: '#'
+            }
+        ]
+    }, */
     const [q, setQ] = useState("");
-    const [searchTerm] = useState(["email", "name"]);
+    const [searchTerm] = useState(["date", "name", "price", "status"]);
 
     function search(items) {
         return items.filter((item) => {
@@ -343,35 +348,6 @@ function MyAds() {
             });
         });
     }
-    /*
-        return (
-            <main>
-                <div>
-                    <h2>Profiles</h2>
-                </div>
-                <div>
-                    <input
-                        type="text"
-                        placeholder="search..."
-                        value={q}
-                        onChange={(e) => setQ(e.target.value)}
-                    />
-    
-                    {search(profileData).map((val, key) => {
-                        return (
-                            <div className="box" key={key}>
-                                <p>{val.name}</p>
-                                <p>{val.email}</p>
-                                {val.skills.map((skill) => {
-                                    return <p>{skill}</p>;
-                                })}
-                            </div>
-                        );
-                    })}
-                </div>
-            </main>
-        );
-        */
 
     return (
         <div className="container m-2 ">

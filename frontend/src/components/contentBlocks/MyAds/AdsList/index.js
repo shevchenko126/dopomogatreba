@@ -14,7 +14,7 @@ function AdsList(props) {
     // const [card, setCard] = useState([])
     const [loading, setLoading] = useState(false)
     const [currentPage, setCurrentPage] = useState(1)
-    const [cardsPerPage] = useState(2)
+    const [cardsPerPage] = useState(5)
     const [siblingCount] = useState(1)
     const [arrOfPage, setArrOfPage] = useState([])
 

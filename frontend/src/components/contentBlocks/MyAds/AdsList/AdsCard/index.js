@@ -4,6 +4,10 @@ import AdsCardDropdown from './AdsCardDropdown';
 
 function AdsCard( { props, loading } ) {
 
+    function capitalizeFirstLetter(string) {
+        return string[0].toUpperCase() + string.slice(1);
+      }
+
     if(loading){
         return <h2>Loading...</h2>
     }
@@ -20,7 +24,7 @@ function AdsCard( { props, loading } ) {
                             </div>
                             <div className="ads__card__date">{card.date}</div>
                             <div className="ads__card__price">{'\u20B4'}{card.price}</div>
-                            <div className={card.status ? "ads__card__activity active" : "ads__card__activity expire"}>{card.status ? "Active" : "Expire"}</div>
+                            <div className={`ads__card__activity ${card.status}`}>{capitalizeFirstLetter(card.status)}</div>
                             <div className="ads__card__buttons">
                                 <button className="ads__card__edit" title="Edit">Edit</button>
                                 <AdsCardDropdown props={card.dropdownItems} />
