@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import CurrencyFormat from 'react-currency-format';
+import SelectCountryCity from './SelectCountryCity';
 
 
 const PaymentDetails = () => {
@@ -53,7 +54,6 @@ const PaymentDetails = () => {
                     <Modal.Title>Payment Details</Modal.Title>
                 </Modal.Header>
                 <Modal.Body className='d-flex flex-column'>
-
                     <div className='input-block'>
                         <label className='lbl-input' htmlFor='nameOnCard'>Name on Card</label>
                         <input
@@ -100,6 +100,7 @@ const PaymentDetails = () => {
                     </div>
 
                     </div>
+                    <SelectCountryCity/>
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleClose}>
