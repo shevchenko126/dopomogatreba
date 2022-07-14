@@ -3,6 +3,7 @@ import './index.css'
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import SelectCountryCity from './SelectCountryCity';
 
 
 const PaymentDetails = () => {
@@ -34,6 +35,7 @@ const PaymentDetails = () => {
                         id='nameOnCard'
                         placeholder='Adress line 01'
                     ></input>
+                    <SelectCountryCity/>
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleClose}>
