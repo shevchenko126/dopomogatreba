@@ -7,7 +7,7 @@ function AdsPagination({ cardsPerPage, totalCards, paginate, prevPage, nextPage,
     const totalPages = Math.ceil(totalCards / cardsPerPage)
 
     return (
-        <div className="ads-pagination d-flex flex-row justify-content-center mt-4 gap-3">
+        <div className="ads-pagination d-flex flex-row justify-content-center mt-4">
             {currentPage !== pageNumbers[0] &&
                 <div className="page-btn">
                     <div className="page-btn-link arrow-left d-flex align-items-center justify-content-center" onClick={prevPage}>

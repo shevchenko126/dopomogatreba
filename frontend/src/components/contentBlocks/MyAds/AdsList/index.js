@@ -4,7 +4,7 @@ import '../index.css'
 import AdsNavBar from './AdsNavBar';
 import AdsCard from './AdsCard';
 import AdsPagination from '../AdsPagination';
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useReducer } from "react";
 
 
 function AdsList(props) {
@@ -14,7 +14,7 @@ function AdsList(props) {
     // const [card, setCard] = useState([])
     const [loading, setLoading] = useState(false)
     const [currentPage, setCurrentPage] = useState(1)
-    const [cardsPerPage] = useState(5)
+    const [cardsPerPage] = useState(2)
     const [siblingCount] = useState(1)
     const [arrOfPage, setArrOfPage] = useState([])
 
@@ -73,8 +73,28 @@ function AdsList(props) {
         return Array.from({ length }, (_, idx) => idx + start);
     };
 
-    useEffect(() => {
+    function useScreenSize() {
+        const [windowSize, setWindowSize] = useState(getWindowSize());
 
+        useEffect(() => {
+            function handleWindowResize() {
+                setWindowSize(getWindowSize());
+            }
+            window.addEventListener('resize', handleWindowResize);
+            return () => {
+                window.removeEventListener('resize', handleWindowResize);
+            };
+        }, []);
+        return (windowSize)
+    }
+
+    function getWindowSize() {
+        const { innerWidth, innerHeight } = window;
+        return { innerWidth, innerHeight };
+    }
+
+    useEffect(() => {
+        
         let tempNumberOfPages = [...pages]
 
         const leftSiblingIndex = Math.max(currentPage - siblingCount, 1);
@@ -94,15 +114,19 @@ function AdsList(props) {
 
             let leftItemCount = 1 + 2 * siblingCount;
             let leftRange = range(1, leftItemCount);
-            let rightRange = range(leftItemCount + (4 * siblingCount), totalPageCount)
-            tempNumberOfPages = [...leftRange, 'R...', ...rightRange];
+            let rightItemCount = 1 + 2 * siblingCount;
+            let rightRange = range(
+                totalPageCount - rightItemCount,
+                totalPageCount
+            );
+            tempNumberOfPages = [...leftRange, 'R...', totalPageCount];
 
         }
 
         if (shouldShowLeftDots && !shouldShowRightDots) {
             let rightItemCount = 1 + 2 * siblingCount;
             let rightRange = range(
-                totalPageCount - rightItemCount + 1,
+                totalPageCount - rightItemCount,
                 totalPageCount
             );
             tempNumberOfPages = [firstPageIndex, 'L...', ...rightRange];
@@ -121,7 +145,7 @@ function AdsList(props) {
                 let leftRange = range(1, leftItemCount)
                 tempNumberOfPages = [...leftRange, 'R...', totalPageCount]
 
-            }else if (shouldShowLeftDots && !shouldShowRightDots) {
+            } else if (shouldShowLeftDots && !shouldShowRightDots) {
                 let rightItemCount = 1 + 2 * siblingCount;
                 let rightRange = range(
                     totalPageCount - rightItemCount + 1,
@@ -129,7 +153,7 @@ function AdsList(props) {
                 );
                 tempNumberOfPages = [firstPageIndex, 'L...', ...rightRange];
             } else {
-                
+
                 let leftItemCount = 1 + 2 * siblingCount;
                 let leftRange = range(1, leftItemCount)
                 tempNumberOfPages = [...leftRange, 'R...', totalPageCount]
@@ -142,7 +166,6 @@ function AdsList(props) {
         }
 
         setArrOfPage(tempNumberOfPages)
-
     }, [currentPage])
 
 
