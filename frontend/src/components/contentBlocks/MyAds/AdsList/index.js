@@ -8,7 +8,7 @@ import React, { useState, useEffect } from "react";
 
 
 function AdsList(props) {
-    let {profileData, search} = props.cards
+    let { profileData, search } = props.cards
     let cards = search(profileData)
 
     // const [card, setCard] = useState([])
@@ -92,15 +92,15 @@ function AdsList(props) {
 
         if (!shouldShowLeftDots && shouldShowRightDots) {
 
-            let leftItemCount = 3 + 2 * siblingCount;
+            let leftItemCount = 1 + 2 * siblingCount;
             let leftRange = range(1, leftItemCount);
+            let rightRange = range(leftItemCount + (4 * siblingCount), totalPageCount)
+            tempNumberOfPages = [...leftRange, 'R...', ...rightRange];
 
-            tempNumberOfPages = [...leftRange, 'R...', totalPageCount];
         }
 
         if (shouldShowLeftDots && !shouldShowRightDots) {
-
-            let rightItemCount = 3 + 2 * siblingCount;
+            let rightItemCount = 1 + 2 * siblingCount;
             let rightRange = range(
                 totalPageCount - rightItemCount + 1,
                 totalPageCount
@@ -113,9 +113,34 @@ function AdsList(props) {
             tempNumberOfPages = [firstPageIndex, 'L...', ...middleRange, 'R...', lastPageIndex];
         }
 
-        if (totalPageCount <= 7) {
+        if (totalPageCount === 6) {
+
+            if (!shouldShowLeftDots && shouldShowRightDots) {
+
+                let leftItemCount = 1 + 2 * siblingCount;
+                let leftRange = range(1, leftItemCount)
+                tempNumberOfPages = [...leftRange, 'R...', totalPageCount]
+
+            }else if (shouldShowLeftDots && !shouldShowRightDots) {
+                let rightItemCount = 1 + 2 * siblingCount;
+                let rightRange = range(
+                    totalPageCount - rightItemCount + 1,
+                    totalPageCount
+                );
+                tempNumberOfPages = [firstPageIndex, 'L...', ...rightRange];
+            } else {
+                
+                let leftItemCount = 1 + 2 * siblingCount;
+                let leftRange = range(1, leftItemCount)
+                tempNumberOfPages = [...leftRange, 'R...', totalPageCount]
+            }
+
+        }
+
+        if (totalPageCount <= 5) {
             tempNumberOfPages = [...pages]
         }
+
         setArrOfPage(tempNumberOfPages)
 
     }, [currentPage])
