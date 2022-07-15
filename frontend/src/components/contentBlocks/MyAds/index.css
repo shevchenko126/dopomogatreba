@@ -108,6 +108,7 @@ body {
 
 
 .ads-pagination {
+    gap:16px;
     max-width: 984px;
     width: 100%;
 }
@@ -696,7 +697,7 @@ body {
 }
 
 /* @media screen and (min-width: 320px) and (max-width:576px) { */
-@media only screen and (max-width:640px) {
+    @media only screen and (max-width:640px) {
     /* Styles for devices with the smallest width 320px - 567px (smartphones) */
     /* Styles for ads list and ads cards */
 
@@ -748,6 +749,64 @@ body {
     }
 
     .search-block {
-        gap: 10px;
+        gap: 8px;
     }
+
+    .page-btn {
+        width: 38px;
+        height: 38px;
+    }
+    
+    .page-btn-link {
+        width: 38px;
+        height: 38px;
+    }
+    
+    
+    .page-link {
+        width: 38px;
+        height: 38px;
+        font-size: 12px;
+    }
+    
+    .page-btn-link {
+        width: 38px;
+        height: 38px;
+    }
+    
+    
+    .arrow-left::after {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .arrow-right::after {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media only screen and (max-width:385px) {
+
+    .ads-pagination{
+        gap:4px;
+    }
+
+    .page-btn {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .page-btn-link {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .page-link {
+        width: 30px;
+        height: 30px;
+        font-size: 11px;
+    }
+    
+    
 }
