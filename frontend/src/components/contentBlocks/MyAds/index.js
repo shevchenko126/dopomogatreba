@@ -308,31 +308,6 @@ const cards = [
 function MyAds() {
 
     const [profileData, setprofileData] = useState(cards);
-
-    /* {
-        id: 0,
-        image: 'https://picsum.photos/200',
-        name: "CheckCheckCheckCheck",
-        date: '12.06.2003',
-        price: 250,
-        status: "active",
-        dropdownItems: [
-            {
-                name: 'View all details',
-                icon: 'Eye',
-                href: '#',
-            },
-            {
-                name: 'Mark it expire',
-                icon: 'XCircle',
-                href: '#'
-            },
-            {
-                name: 'Delete Ads',
-                href: '#'
-            }
-        ]
-    }, */
     const [q, setQ] = useState("");
     const [searchTerm] = useState(["date", "name", "price", "status"]);
 

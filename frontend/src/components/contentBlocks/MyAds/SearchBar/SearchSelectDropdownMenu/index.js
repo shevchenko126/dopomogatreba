@@ -1,10 +1,10 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import '../../index.css'
 import React, { useEffect, useState } from "react";
-import SearchSelectDropdownMax from './SearchSelectDropDownMax';
-import SearchSelectDropdownMin from './SearchSelectDropDownMin';
+import SearchSelectDropDownMax from './SearchSelectDropDownMax';
+import SearchSelectDropDownMin from './SearchSelectDropDownMin';
 
-function SearchSelectDropdownMenu({ props }) {
+function SearchSelectDropDownMenu({ props }) {
     function useScreenSize() {
         const [windowSize, setWindowSize] = useState(getWindowSize());
 
@@ -31,7 +31,7 @@ function SearchSelectDropdownMenu({ props }) {
                 className="search__dropdown d-flex flex-row flex-nowrap justify-content-between justify-content-md-end align-items-start">
                 {
                     props.map((category, key) => {
-                        return <SearchSelectDropdownMin props={category} key={key} />
+                        return <SearchSelectDropDownMin props={category} key={key} />
                     })
                 }
             </div>
@@ -43,7 +43,7 @@ function SearchSelectDropdownMenu({ props }) {
                 className="search__dropdown d-flex flex-row flex-nowrap justify-content-between justify-content-md-end align-items-start">
                 {
                     props.map((category, key) => {
-                        return <SearchSelectDropdownMax props={category} key={key} />
+                        return <SearchSelectDropDownMax props={category} key={key} />
                     })
                 }
             </div>
@@ -54,4 +54,4 @@ function SearchSelectDropdownMenu({ props }) {
 }
 
 
-export default SearchSelectDropdownMenu
+export default SearchSelectDropDownMenu

@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import '../index.css'
 import SearchInput from './SearchInput';
-import SearchSelectDropdownMenu from './SearchSelectDropdownMenu';
+import SearchSelectDropDownMenu from './SearchSelectDropDownMenu';
 
 const filters = [
     {
@@ -57,7 +57,7 @@ function SearchBar(props) {
     return (
         <div className="search-block d-flex flex-md-row flex-column justify-content-between align-items-center p-1">
             <SearchInput placeholder='Ads tittle, keyword' props={props.props} />
-            <SearchSelectDropdownMenu props={filters} />
+            <SearchSelectDropDownMenu props={filters} />
         </div>
     )
 }

@@ -3,7 +3,7 @@ import '../../../index.css'
 
 import React, { useRef, useEffect } from "react";
 
-function SearchSelectDropdownMax({ props }) {
+function SearchSelectDropDownMax({ props }) {
     const wrapperRef = useRef(null);
     useCloseDrops(wrapperRef);
 
@@ -57,4 +57,4 @@ function SearchSelectDropdownMax({ props }) {
 }
 
 
-export default SearchSelectDropdownMax
+export default SearchSelectDropDownMax

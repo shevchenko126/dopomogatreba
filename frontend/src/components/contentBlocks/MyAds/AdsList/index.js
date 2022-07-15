@@ -113,9 +113,9 @@ function AdsList(props) {
             tempNumberOfPages = [firstPageIndex, 'L...', ...middleRange, 'R...', lastPageIndex];
         }
 
-        if (totalPageCount <= 7) {
-            tempNumberOfPages = [...pages]
-        }
+        // if (totalPageCount <= 7) {
+        //     tempNumberOfPages = [...pages]
+        // }
         setArrOfPage(tempNumberOfPages)
 
     }, [currentPage])

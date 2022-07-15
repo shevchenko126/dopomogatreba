@@ -2,7 +2,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import '../../../index.css'
 import React, { useRef, useEffect } from "react";
 
-function SearchSelectDropdownMin({ props }) {
+function SearchSelectDropDownMin({ props }) {
     const wrapperRef = useRef(null);
 
     useCloseDrops(wrapperRef);
@@ -59,4 +59,4 @@ function SearchSelectDropdownMin({ props }) {
 }
 
 
-export default SearchSelectDropdownMin
+export default SearchSelectDropDownMin
