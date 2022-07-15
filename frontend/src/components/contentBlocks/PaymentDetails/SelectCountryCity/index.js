@@ -8,6 +8,7 @@ const SelectCountryCity = () => {
   const [country, setCountry] = useState([]);
   const [countryid, setCountryid] = useState("");
   const [city, setCity] = useState([]);
+  const [scity, setSCity] = useState("")
 
   useEffect(() => {
     const getCountry = () => {
@@ -32,6 +33,8 @@ const SelectCountryCity = () => {
 
     getCountry()
   }, [])
+
+  
 
   const handlecountry = (event) => {
     const getcountryid = event;
@@ -65,12 +68,14 @@ const SelectCountryCity = () => {
         .catch(error => console.log('error', error));
 
 
+
     }
 
     if (country.length > 0) {
       getCity()
     }
   }, [countryid])
+
 
   const customStyles = {
     option: (provided, state) => ({
@@ -132,6 +137,7 @@ const SelectCountryCity = () => {
               (e) => {
                 const cntr = e.Iso2
                 handlecountry(cntr)
+                setSCity(null)
               }}
           />
         </div>
@@ -148,6 +154,8 @@ const SelectCountryCity = () => {
               value: gcity,
               ...gcity
             }))}
+            value={scity}
+            onChange={(value) => setSCity(value)}
           />
         </div>
       </div>
