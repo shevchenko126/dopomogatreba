@@ -4,6 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import CurrencyFormat from 'react-currency-format';
 import SelectCountryCity from './SelectCountryCity';
+import NumberFormat from 'react-number-format';
 
 
 const PaymentDetails = () => {
@@ -76,10 +77,12 @@ const PaymentDetails = () => {
                                 format={cardExpiry}
                                 placeholder="MM/YY"
                                 mask={['M', 'M', 'Y', 'Y']} />
-                            <CurrencyFormat
+                            <NumberFormat
                                 className='card-prop'
                                 id='creditCardCVC'
                                 format='###'
+                                type={'password'}
+                                mask=''
                                 placeholder="CVC" />
                         </div>
                         <div className='input-block'>
