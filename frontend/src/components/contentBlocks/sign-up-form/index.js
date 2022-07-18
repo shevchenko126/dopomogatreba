@@ -1,18 +1,18 @@
-import React, {useState, useCallback} from 'react';
+import React, {useState, useCallback, useRef} from 'react';
 import "./index.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 
 
 const SignUpForm = () => {
-  const [fullName, setFullName] = useState('');
-  const [userName, setUserName] = useState('');
-  const [userNameEmail, setUserNameEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
   const [checkAgree, setCheckAgree] = useState(false);
   const [passwordType, setPasswordType] = useState("password");
   const [confirmPasswordType, setConfirmPasswordType] = useState("password");
+
+  const fullNameInputRef = useRef() 
+  const userNameInputRef = useRef() 
+  const userNameEmailInputRef = useRef() 
+  const passwordInputRef = useRef() 
+  const confirmPasswordInputRef = useRef() 
 
   const togglePassword =useCallback(()=>{
     if(passwordType==="password")
@@ -32,33 +32,24 @@ const SignUpForm = () => {
       setConfirmPasswordType("password")
     },[confirmPasswordType]) 
 
-  const fullNameChangeHandler = (event)=>{
-    setFullName(event.target.value)
-  }
-  const userNameChangeHandler = (event)=>{
-    setUserName(event.target.value)
-  }
-  const userNameEmailChangeHandler = (event)=>{
-    setUserNameEmail(event.target.value)
-  }
-  const passwordChangeHandler = (event)=>{
-    setPassword(event.target.value)
-  }
-  const confirmPasswordChangeHandler = (event)=>{
-    setConfirmPassword(event.target.value)
-  }
   const checkAgreeChangeHandler = ()=>{
     setCheckAgree(!checkAgree);
   }
 
   const signUpBtnGoogleHandler =(props)=>{
   }
+
   const signUpBtnFacebookHandler =(props)=>{
   }
 
   const signUpBtnHandler = (event)=>{
       event.preventDefault();
-      if ((fullName.trim().length ===0) || userName.trim().length ===0 || userNameEmail.trim().length ===0 || password.trim().length ===0 || confirmPassword.trim().length===0 || confirmPassword.trim().length===0 || !checkAgree)
+      const enteredFullName = fullNameInputRef.current.value;
+      const enteredUserName = userNameInputRef.current.value;
+      const enteredUserNameEmail = userNameEmailInputRef.current.value;
+      const enteredPassword = passwordInputRef.current.value;
+      const enteredConfirmPassword = confirmPasswordInputRef.current.value;
+      if (enteredFullName.trim().length ===0 || enteredUserName.trim().length ===0 || enteredUserNameEmail.trim().length ===0 || enteredPassword.trim().length ===0 || enteredConfirmPassword.trim().length===0 || !checkAgree)
           {
           alert('Please, enter the data into the form for submission!');
           return
@@ -66,37 +57,24 @@ const SignUpForm = () => {
       setPasswordType("password");
       setConfirmPasswordType("password");
       const signInData = {
-        name: fullName,
-        user: userName,
-        userEmail: userNameEmail,
-        pswd: password,
-        confPswd:confirmPassword,
+        name: enteredFullName,
+        user: enteredUserName,
+        userEmail: enteredUserNameEmail,
+        pswd: enteredPassword,
+        confPswd:enteredConfirmPassword,
         agree: checkAgree
       }
-      setFullName('')
-      setUserName('')
-      setUserNameEmail('')
-      setPassword('')
-      setConfirmPassword('')
+      fullNameInputRef.current.value='';
+      userNameInputRef.current.value='';
+      userNameEmailInputRef.current.value='';
+      passwordInputRef.current.value='';
+      confirmPasswordInputRef.current.value='';
       setCheckAgree(false)
     }
     
   return (
     <div>
-      <link
-        rel="stylesheet"
-        href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
-      />
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous"/>
-      <link rel="preconnect" href="https://fonts.googleapis.com"/>
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-      <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/> 
-      <link rel="stylesheet" href="/css/index.css"/>
-      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"/>
-
-
-      <script src="https://kit.fontawesome.com/13676e3493.js" crossorigin="anonymous"></script>
-
+    
       <form className="row align-items-center main-form" onSubmit={signUpBtnHandler}>
       
           <div className="row align-items-center heading p-0">
@@ -124,18 +102,18 @@ const SignUpForm = () => {
           <div className="row align-items-start inputs m-0">
             <div className="row align-items-center justify-content-start fullname-username m-0 p-0">
               <div className="col p-0">
-                <input type="text" className="form-control input" id="inputFullName" placeholder="Full name" value={fullName} onChange={fullNameChangeHandler} />
+                <input type="text" className="form-control input" id="inputFullName" placeholder="Full name" ref={fullNameInputRef} />
               </div>
               <div className="col p-0">
-                <input type="text" className="form-control input" id="inputUserName" placeholder="Username" value={userName} onChange={userNameChangeHandler} />
+                <input type="text" className="form-control input" id="inputUserName" placeholder="Username" ref={userNameInputRef} />
               </div>
             </div>
             <div className="col p-0">
-              <input type="text" className="form-control input" id="inputEmail" placeholder="Username or email address" value={userNameEmail} onChange={userNameEmailChangeHandler} />
+              <input type="text" className="form-control input" id="inputEmail" placeholder="Username or email address" ref={userNameEmailInputRef} />
             </div>
 
             <div className="col p-0 inputPassword">
-              <input type={passwordType} className="form-control input" id="inputPassword" placeholder="Password" onChange={passwordChangeHandler} value={password} />
+              <input type={passwordType} className="form-control input" id="inputPassword" placeholder="Password" ref={passwordInputRef} />
               <div className="btn-eye-div">
                     <button  type="button" className="btn-eye" onClick={togglePassword}>
                      {passwordType==="password"? 
@@ -153,7 +131,7 @@ const SignUpForm = () => {
             </div>
             
             <div className="col p-0 inputPassword">
-              <input type={confirmPasswordType} className="form-control input" id="inputConfirmPassword" placeholder="Confirm Password" onChange={confirmPasswordChangeHandler} value={confirmPassword} />
+              <input type={confirmPasswordType} className="form-control input" id="inputConfirmPassword" placeholder="Confirm Password" ref={confirmPasswordInputRef}/>
               <div className="btn-eye-div">
                     <button  type="button" className="btn-eye" onClick={confirmTogglePassword}>
                      {confirmPasswordType==="password"? 
