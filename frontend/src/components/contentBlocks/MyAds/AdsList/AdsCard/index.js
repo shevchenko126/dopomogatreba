@@ -4,6 +4,26 @@ import AdsCardDropdown from './AdsCardDropdown';
 
 function AdsCard( { props, loading } ) {
 
+    
+    function formattedDate(timestamp) {
+        let dt = new Date(timestamp)
+        const months = [
+            'Jan',
+            'Feb',
+            'Mar',
+            'Apr',
+            'May',
+            'Jun',
+            'Jul',
+            'Aug',
+            'Sep',
+            'Oct',
+            'Nov',
+            'Dec'
+          ]
+          return `${months[dt.getMonth()]} ${dt.getDate()}, ${dt.getFullYear()}`
+    }
+
     function capitalizeFirstLetter(string) {
         return string[0].toUpperCase() + string.slice(1);
       }
@@ -22,7 +42,7 @@ function AdsCard( { props, loading } ) {
                                 </div>
                                 <div className="ads__card__name">{card.name}</div>
                             </div>
-                            <div className="ads__card__date">{card.date}</div>
+                            <div className="ads__card__date">{formattedDate(card.date)}</div>
                             <div className="ads__card__price">{'\u20B4'}{card.price}</div>
                             <div className={`ads__card__activity ${card.status}`}>{capitalizeFirstLetter(card.status)}</div>
                             <div className="ads__card__buttons">

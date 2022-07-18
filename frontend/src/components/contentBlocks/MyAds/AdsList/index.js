@@ -4,17 +4,16 @@ import '../index.css'
 import AdsNavBar from './AdsNavBar';
 import AdsCard from './AdsCard';
 import AdsPagination from '../AdsPagination';
-import React, { useState, useEffect, useReducer } from "react";
+import React, { useState, useEffect } from "react";
 
 
 function AdsList(props) {
     let { profileData, search } = props.cards
     let cards = search(profileData)
 
-    // const [card, setCard] = useState([])
     const [loading, setLoading] = useState(false)
     const [currentPage, setCurrentPage] = useState(1)
-    const [cardsPerPage] = useState(2)
+    const [cardsPerPage] = useState(3)
     const [siblingCount] = useState(1)
     const [arrOfPage, setArrOfPage] = useState([])
 

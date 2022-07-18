@@ -10,7 +10,7 @@ const cards = [
         id: 0,
         image: 'https://picsum.photos/200',
         name: "mel",
-        date: '12.06.2003',
+        date: 1658143787051.676,
         price: 250,
         status: "active",
         dropdownItems: [
@@ -34,7 +34,7 @@ const cards = [
         id: 1,
         image: 'https://picsum.photos/200',
         name: "veronika",
-        date: 0,
+        date: 1670623200000.0,
         price: 251,
         status: "expire",
         dropdownItems: [
@@ -59,31 +59,82 @@ const cards = [
         id: 2,
         image: 'https://picsum.photos/200',
         name: "Veron",
-        date: 0,
+        date: 1573509600000.0,
         price: 252,
-        status: "expire"
+        status: "expire",
+        dropdownItems: [
+            {
+                name: 'View all details',
+                icon: 'Eye',
+                href: '#',
+            },
+            {
+                name: 'Mark it expire',
+                icon: 'XCircle',
+                href: '#'
+            },
+            {
+                name: 'Delete Ads',
+                icon: 'Trash',
+                href: '#',
+            }
+        ]
     },
     {
         id: 3,
         image: 'https://picsum.photos/200',
         name: "vEroNikA",
-        date: 0,
+        date: 1476392400000.0,
         price: 253,
-        status: "expire"
+        status: "expire",
+        dropdownItems: [
+            {
+                name: 'View all details',
+                icon: 'Eye',
+                href: '#',
+            },
+            {
+                name: 'Mark it expire',
+                icon: 'XCircle',
+                href: '#'
+            },
+            {
+                name: 'Delete Ads',
+                icon: 'Trash',
+                href: '#'
+            }
+        ]
     },
     {
         id: 4,
         image: 'https://picsum.photos/200',
         name: "Yehor",
-        date: 0,
+        date: 1379278800000.0,
         price: 254,
-        status: "expire"
+        status: "expire",
+        dropdownItems: [
+            {
+                name: 'View all details',
+                icon: 'Eye',
+                href: '#',
+            },
+            {
+                name: 'Mark it expire',
+                icon: 'XCircle',
+                href: '#'
+            },
+            {
+                name: 'Delete Ads',
+                icon: 'Trash',
+                href: '#'
+            }
+        ]
     },
     {
         id: 5,
         image: 'https://picsum.photos/200',
         name: "YeHor",
-        date: 0,
+        date: 1282078800000.0,
         price: 255,
         status: "expire"
     },
@@ -91,7 +142,7 @@ const cards = [
         id: 6,
         image: 'https://picsum.photos/200',
         name: "CheckCheckCheckCheck",
-        date: 0,
+        date: 1184878800000.0,
         price: 256,
         status: "expire"
     },
@@ -99,7 +150,7 @@ const cards = [
         id: 7,
         image: 'https://picsum.photos/200',
         name: "CheckCheckCheckCheck",
-        date: 0,
+        date: 1087851600000.0,
         price: 257,
         status: "expire"
     },
@@ -107,7 +158,7 @@ const cards = [
         id: 8,
         image: 'https://picsum.photos/200',
         name: "CheckCheckCheckCheck",
-        date: 0,
+        date: 990651600000.0,
         price: 258,
         status: "expire"
     },
@@ -115,7 +166,7 @@ const cards = [
         id: 9,
         image: 'https://picsum.photos/200',
         name: "CheckCheckCheckCheck",
-        date: 0,
+        date: 893538000000.0,
         price: 259,
         status: "expire"
     },
@@ -123,7 +174,7 @@ const cards = [
         id: 10,
         image: 'https://picsum.photos/200',
         name: "CheckCheckCheckCheck",
-        date: 0,
+        date: 796338000000.0,
         price: 260,
         status: "expire"
     },
