@@ -53,6 +53,10 @@ const SelectCountryCity = () => {
   }, [countryid])
 
   const customStyles = {
+    placeholder: (provided, state) => ({
+      ...provided,
+      color: '#939AAD',
+    }),
     option: (provided, state) => ({
       // ...provided,
       cursor: 'pointer',
@@ -82,7 +86,8 @@ const SelectCountryCity = () => {
     dropdownIndicator: (provided, state) => ({
       ...provided,
       color: '#939AAD',
-      transform: (state.isFocused || state.isHovered) && "rotate(180deg)",
+      strokeWidth: '3',
+      transform: state.selectProps.menuIsOpen && "rotate(180deg)",
     }),
     singleValue: (provided, state) => {
       const opacity = state.isDisabled ? 0.5 : 1;

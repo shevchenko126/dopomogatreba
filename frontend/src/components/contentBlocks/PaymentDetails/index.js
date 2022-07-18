@@ -1,5 +1,4 @@
 import 'bootstrap/dist/css/bootstrap.css';
-import './index.css'
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
@@ -65,7 +64,7 @@ const PaymentDetails = () => {
                     </div>
                     <div className='input-block'>
                         <label className='lbl-input' htmlFor='creditCard'>Credit Card</label>
-                        <div className='card-input d-flex flex-row'>
+                        <div className='card-input d-flex flex-row flex-wrap justify-content-between'>
                             <CurrencyFormat
                                 id='creditCard'
                                 className='card-prop flex-grow-1'
@@ -84,7 +83,7 @@ const PaymentDetails = () => {
                                 placeholder="CVC" />
                         </div>
                         <div className='input-block'>
-                        <label className='lbl-input' htmlFor='adress01'>Name on Card</label>
+                        <label className='lbl-input' htmlFor='adress01'>Adress</label>
                         <input
                             type='text'
                             id='adress01'
