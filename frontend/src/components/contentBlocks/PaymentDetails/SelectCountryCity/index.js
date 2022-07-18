@@ -6,8 +6,9 @@ import Select, { NonceProvider } from "react-select";
 const SelectCountryCity = () => {
 
   const [country, setCountry] = useState([]);
-  const [countryid, setCountryid] = useState('');
+  const [countryid, setCountryid] = useState("");
   const [city, setCity] = useState([]);
+  const [scity, setSCity] = useState("")
 
   useEffect(() => {
     const getCountry = () => {
@@ -20,7 +21,7 @@ const SelectCountryCity = () => {
         redirect: 'follow'
       };
 
-      fetch("https://countriesnow.space/api/v0.1/countries/", requestOptions)
+      fetch("https://countriesnow.space/api/v0.1/countries/iso", requestOptions)
         .then(response => response.json())
         .then(result => {
           setCountry(result.data)
@@ -33,24 +34,48 @@ const SelectCountryCity = () => {
     getCountry()
   }, [])
 
+  
+
   const handlecountry = (event) => {
     const getcountryid = event;
     setCountryid(getcountryid);
   }
 
   useEffect(() => {
+
     const getCity = () => {
-      const town = country.filter(obj => {
-        return obj.iso3 === countryid
-      })
-      if (town.length > 0) {
-        console.log(town[0].cities)
-        setCity(town[0].cities)
-      }
+
+      console.log(countryid)
+      var raw = "{\n    \"iso2\": \"" + countryid + "\"\n}";
+
+      var requestOptions = {
+        method: 'POST',
+        headers: {
+          "Content-type": "application/json"
+        },
+        body: raw,
+        redirect: 'follow'
+      };
+
+      fetch("https://countriesnow.space/api/v0.1/countries/cities", requestOptions)
+        .then(response => response.json())
+        .then(result => {
+          if (result.data.length > 0) {
+            setCity(result.data)
+            console.log(result.data)
+          }
+        })
+        .catch(error => console.log('error', error));
+
+
+
     }
 
-    getCity()
+    if (country.length > 0) {
+      getCity()
+    }
   }, [countryid])
+
 
   const customStyles = {
     placeholder: (provided, state) => ({
@@ -78,10 +103,10 @@ const SelectCountryCity = () => {
       gap: '4px',
     }),
     control: () => ({
-        border: '1px solid #EDEFF5',
-        borderRadius: '5px',
-        height: '48px',
-        display: 'flex',
+      border: '1px solid #EDEFF5',
+      borderRadius: '5px',
+      height: '48px',
+      display: 'flex',
     }),
     dropdownIndicator: (provided, state) => ({
       ...provided,
@@ -109,15 +134,15 @@ const SelectCountryCity = () => {
             styles={customStyles}
             options={country.map((getcon, index) => ({
               key: index,
-              label: getcon.country,
-              value: getcon.iso3,
+              label: getcon.name,
+              value: getcon.Iso2,
               ...getcon
             }))}
             onChange={
               (e) => {
-                const cntr = e.iso3
-                console.log(cntr)
+                const cntr = e.Iso2
                 handlecountry(cntr)
+                setSCity(null)
               }}
           />
         </div>
@@ -134,6 +159,8 @@ const SelectCountryCity = () => {
               value: gcity,
               ...gcity
             }))}
+            value={scity}
+            onChange={(value) => setSCity(value)}
           />
         </div>
       </div>
