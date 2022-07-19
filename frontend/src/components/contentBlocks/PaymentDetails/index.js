@@ -41,7 +41,7 @@ const PaymentDetails = ({ props }) => {
     }
 
     return (
-        <form method='post'>
+        <>
             <Button variant="primary" onClick={handleShow}>
                 open modal
             </Button>
@@ -52,83 +52,85 @@ const PaymentDetails = ({ props }) => {
                 backdrop="static"
                 keyboard={false}
             >
-                <Modal.Header closeButton>
-                    <Modal.Title>Payment Details</Modal.Title>
-                </Modal.Header>
-                <Modal.Body className='d-flex flex-column'>
-                    <div className='input-block'>
-                        <label className='lbl-input' htmlFor='nameOnCard'>Name on Card</label>
-                        <input
-                            type='text'
-                            id='nameOnCard'
-                            className='input-field'
-                            placeholder='Adress line 01'
-                        ></input>
-                    </div>
-                    <div className='input-block'>
-                        <label className='lbl-input' htmlFor='creditCard'>Credit Card</label>
-                        <div className='card-input d-flex flex-row flex-wrap justify-content-between'>
-                            <CurrencyFormat
-                                id='creditCard'
-                                className='card-prop flex-grow-1'
-                                placeholder='Card Number'
-                                format="#### #### #### ####" />
-                            <CurrencyFormat
-                                className='card-prop'
-                                id='creditCardExpiry'
-                                format={cardExpiry}
-                                placeholder="MM/YY"
-                                mask={['M', 'M', 'Y', 'Y']} />
-                            <NumberFormat
-                                className='card-prop'
-                                id='creditCardCVC'
-                                format='###'
-                                type={'password'}
-                                mask=''
-                                placeholder="CVC" />
-                        </div>
+                <form action='' method='post'>
+                    <Modal.Header closeButton>
+                        <Modal.Title>Payment Details</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body className='d-flex flex-column'>
                         <div className='input-block'>
-                            <label className='lbl-input' htmlFor='adress01'>Adress</label>
+                            <label className='lbl-input' htmlFor='nameOnCard'>Name on Card</label>
                             <input
                                 type='text'
-                                id='adress01'
+                                id='nameOnCard'
                                 className='input-field'
                                 placeholder='Adress line 01'
                             ></input>
-                            <input
-                                type='text'
-                                id='adress02'
-                                className='input-field'
-                                placeholder='Adress line 02'
-                            ></input>
                         </div>
+                        <div className='input-block'>
+                            <label className='lbl-input' htmlFor='creditCard'>Credit Card</label>
+                            <div className='card-input d-flex flex-row flex-wrap justify-content-between'>
+                                <CurrencyFormat
+                                    id='creditCard'
+                                    className='card-prop flex-grow-1'
+                                    placeholder='Card Number'
+                                    format="#### #### #### ####" />
+                                <CurrencyFormat
+                                    className='card-prop'
+                                    id='creditCardExpiry'
+                                    format={cardExpiry}
+                                    placeholder="MM/YY"
+                                    mask={['M', 'M', 'Y', 'Y']} />
+                                <NumberFormat
+                                    className='card-prop'
+                                    id='creditCardCVC'
+                                    format='###'
+                                    type={'password'}
+                                    mask=''
+                                    placeholder="CVC" />
+                            </div>
+                            <div className='input-block'>
+                                <label className='lbl-input' htmlFor='adress01'>Adress</label>
+                                <input
+                                    type='text'
+                                    id='adress01'
+                                    className='input-field'
+                                    placeholder='Adress line 01'
+                                ></input>
+                                <input
+                                    type='text'
+                                    id='adress02'
+                                    className='input-field'
+                                    placeholder='Adress line 02'
+                                ></input>
+                            </div>
 
-                    </div>
-                    <SelectCountryCity />
-                    <div className='info'>
-                        <div className='account-plan'>
-                            <span className='account-plan__label'>Account plan: </span>
-                            {accountPlan}
-                            <span className='account-plan__price'>{currencyFormat(planPrice, 'symbol')}</span>
                         </div>
-                        <div className='payment-total'>
-                            <span>Total: </span>
-                            <span className='payment-total__price'>{currencyFormat(planPrice, 'code')}</span>
+                        <SelectCountryCity />
+                        <div className='info'>
+                            <div className='account-plan'>
+                                <span className='account-plan__label'>Account plan: </span>
+                                {accountPlan}
+                                <span className='account-plan__price'>{currencyFormat(planPrice, 'symbol')}</span>
+                            </div>
+                            <div className='payment-total'>
+                                <span>Total: </span>
+                                <span className='payment-total__price'>{currencyFormat(planPrice, 'code')}</span>
+                            </div>
                         </div>
-                    </div>
-                </Modal.Body>
+                    </Modal.Body>
 
-                <Modal.Footer>
-                    <input
-                        type='submit'
-                        className='btn-submit'
-                        value='Subscribe &amp; Checkout'
+                    <Modal.Footer>
+                        <input
+                            type='submit'
+                            className='btn-submit'
+                            value='Subscribe &amp; Checkout'
                         // onClick={handleClose}
                         ></input>
-                    <div className='payment-reminder'>We will bill you every month on the {(new Date()).getDate()}th, unless you cancel.</div>
-                </Modal.Footer>
+                        <div className='payment-reminder'>We will bill you every month on the {(new Date()).getDate()}th, unless you cancel.</div>
+                    </Modal.Footer>
+                </form>
             </Modal>
-        </form>
+        </>
     )
 }
 
