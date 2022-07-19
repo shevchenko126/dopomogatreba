@@ -3,29 +3,31 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 
 const Description = ({ props }) => {
-    props.map((block) => {
-        console.log(block)
-    })
+    const formatContent = (content) => {
+        // duplicate \n for gap between pseudo paragraphs
+        return content.replace('\n', '\n\n')
+    }
     return (
-        <>
+        <div className='container col-6'>
             {props.map(({ header, content }, key) => {
-                { console.log(typeof (content), content instanceof Array) }
-
                 return (
-                    <>
-                        <h3>{header}</h3>
-                        {(content instanceof Array) ?
-                        <ul>
-                            {content.map((item, key) => {
-                                return (<li key={key}>{item}</li>)
-                            })}
-                        </ul>
-                        :
-                        <p>{content}</p>}
-                    </>
+                    <div
+                        key={key}
+                        className='description-block'>
+                        <h3 className='description-header'>{header}</h3>
+                        {(content instanceof Array)
+                            ?
+                            <ul className='description-content'>
+                                {content.map((item, key) => {
+                                    return (<li key={key}>{item}</li>)
+                                })}
+                            </ul>
+                            :
+                            <p className='description-content'>{formatContent(content)}</p>}
+                    </div>
                 )
             })}
-        </>
+        </div>
     )
 
 }
