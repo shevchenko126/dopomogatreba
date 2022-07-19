@@ -13,6 +13,9 @@ body {
   line-height: 48px;
   margin-bottom: 50px;
 }
+.top-category__cards{
+  margin-bottom: 100px;
+}
 .top-category__card {
   padding: 24px;
   background-color: #ffff;
@@ -46,6 +49,7 @@ body {
   font-size: 1.25rem;
   line-height: 32px;
   margin-bottom: 16px;
+  white-space: nowrap;
 }
 .top-category-card-info-blockTitle__items {
   font-family: "Nunito", sans-serif;
