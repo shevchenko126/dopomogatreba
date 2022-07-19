@@ -112,6 +112,9 @@
 .info {
     color: #191F33;
     font-family: 'Nunito', sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
 
 .account-plan__label {
@@ -158,6 +161,10 @@
 
     color: #FFFFFF;
 
+}
+
+.modal-footer {
+    gap: 16px;
 }
 
 .payment-reminder {
