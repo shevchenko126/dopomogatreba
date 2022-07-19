@@ -5,9 +5,11 @@ import Modal from 'react-bootstrap/Modal';
 import CurrencyFormat from 'react-currency-format';
 import SelectCountryCity from './SelectCountryCity';
 import NumberFormat from 'react-number-format';
+import currencyFormat from './currencyFormat';
 
+const PaymentDetails = ({ props }) => {
+    const { accountPlan, planPrice } = props
 
-const PaymentDetails = () => {
 
     const [show, setShow] = useState(false);
 
@@ -39,7 +41,7 @@ const PaymentDetails = () => {
     }
 
     return (
-        <>
+        <form method='post'>
             <Button variant="primary" onClick={handleShow}>
                 open modal
             </Button>
@@ -86,32 +88,47 @@ const PaymentDetails = () => {
                                 placeholder="CVC" />
                         </div>
                         <div className='input-block'>
-                        <label className='lbl-input' htmlFor='adress01'>Adress</label>
-                        <input
-                            type='text'
-                            id='adress01'
-                            className='input-field'
-                            placeholder='Adress line 01'
-                        ></input>
-                        <input
-                            type='text'
-                            id='adress02'
-                            className='input-field'
-                            placeholder='Adress line 02'
-                        ></input>
-                    </div>
+                            <label className='lbl-input' htmlFor='adress01'>Adress</label>
+                            <input
+                                type='text'
+                                id='adress01'
+                                className='input-field'
+                                placeholder='Adress line 01'
+                            ></input>
+                            <input
+                                type='text'
+                                id='adress02'
+                                className='input-field'
+                                placeholder='Adress line 02'
+                            ></input>
+                        </div>
 
                     </div>
-                    <SelectCountryCity/>
+                    <SelectCountryCity />
+                    <div className='info'>
+                        <div className='account-plan'>
+                            <span className='account-plan__label'>Account plan: </span>
+                            {accountPlan}
+                            <span className='account-plan__price'>{currencyFormat(planPrice, 'symbol')}</span>
+                        </div>
+                        <div className='payment-total'>
+                            <span>Total: </span>
+                            <span className='payment-total__price'>{currencyFormat(planPrice, 'code')}</span>
+                        </div>
+                    </div>
                 </Modal.Body>
+
                 <Modal.Footer>
-                    <Button variant="secondary" onClick={handleClose}>
-                        Close
-                    </Button>
-                    <Button variant="primary">Understood</Button>
+                    <input
+                        type='submit'
+                        className='btn-submit'
+                        value='Subscribe &amp; Checkout'
+                        // onClick={handleClose}
+                        ></input>
+                    <div className='payment-reminder'>We will bill you every month on the {(new Date()).getDate()}th, unless you cancel.</div>
                 </Modal.Footer>
             </Modal>
-        </>
+        </form>
     )
 }
 

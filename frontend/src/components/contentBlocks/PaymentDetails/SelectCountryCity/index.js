@@ -1,7 +1,7 @@
 import "../index.css";
 import React, { useState, useEffect } from "react";
 import "react-bootstrap"
-import Select, { NonceProvider } from "react-select";
+import Select from "react-select";
 
 const SelectCountryCity = () => {
 

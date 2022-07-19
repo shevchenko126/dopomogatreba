@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
     margin: 0;
@@ -7,6 +7,7 @@
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
+    line-height: 24px;
 }
 
 .modal-content {
@@ -16,8 +17,8 @@
 
 .modal-title {
     font-weight: 600;
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 1.5rem;
+    line-height: 1.3rem;
     color: #191F33;
 }
 
@@ -25,33 +26,34 @@
     border: none;
 }
 
-/*TODO*/
-
 .modal-header .btn-close {
     height: 24px;
     width: 24px;
     padding: 12px;
     opacity: 1;
-    background-color: #00AAFF;
-    /* background-image: none; */
+    background-color: transparent;
+    overflow: visible;
+    background-image: url(../../../../public/icons/fi_x_reg.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
 }
 
-.btn-close::after {
-    content: "";
-    width: 24px;
-    height: 24px;
-    /* -webkit-mask-size: cover;
-    mask-size: cover;
-    
-    -webkit-mask: url(../../../../public/icons/fi_x.svg) no-repeat 50% 50%;
-    mask: url(../../../../public/icons/fi_x.svg) no-repeat 50% 50%; */
-    background-color: #464D61;
+.btn-close:hover,
+.btn-close:focus {
+    background-color: #EBEEF7;
+    background-image: url(../../../../public/icons/fi_x_hov.svg);
+}
+
+.btn-close:active {
+    background-color: #00AAFF;
+    background-image: url(../../../../public/icons/fi_x_act.svg);
 }
 
 .lbl-input {
-    font-family: 'Nunito';
-    font-size: 14px;
-    line-height: 20px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.875rem;
+    line-height: 0.83rem;
     color: #191F33;
 }
 
@@ -92,8 +94,7 @@
 .card-prop {
     outline: none;
     border: none;
-    font-family: 'Nunito';
-    line-height: 24px;
+    font-family: 'Nunito', sans-serif;
 }
 
 *::placeholder {
@@ -108,11 +109,71 @@
     width: 33px;
 }
 
+.info {
+    color: #191F33;
+    font-family: 'Nunito', sans-serif;
+}
+
+.account-plan__label {
+    color: #636A80;
+}
+
+.account-plan__price {
+    color: #191F33;
+    font-weight: 600;
+    float: right;
+}
+
+.payment-total>* {
+    font-size: 1.25rem;
+}
+
+.payment-total__price {
+    font-weight: 600;
+    float: right;
+}
+
+.btn-submit {
+    outline: none;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 32px;
+    gap: 12px;
+
+    width: 648px;
+    height: 58px;
+
+    background: #00AAFF;
+    border-radius: 6px;
+
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 2.416rem;
+
+    text-align: center;
+    text-transform: capitalize;
+
+    color: #FFFFFF;
+
+}
+
+.payment-reminder {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.875rem;
+    line-height: 0.916rem;
+    color: #939AAD;
+    text-align: center;
+}
+
 @media only screen and (max-width:576px) {
 
     /* Styles for devices with the smallest width 320px - 567px (smartphones) */
     * {
         font-size: 14px;
+        line-height: 20px;
     }
 
     #creditCard {
@@ -135,7 +196,6 @@
         background: #FFFFFF;
         border: 1px solid #EDEFF5;
         border-radius: 5px;
-        line-height: 24px;
         height: 48px;
         padding: 0 12px;
     }
