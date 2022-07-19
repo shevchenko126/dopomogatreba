@@ -64,6 +64,7 @@ const PaymentDetails = ({ props }) => {
                                 id='nameOnCard'
                                 className='input-field'
                                 placeholder='Adress line 01'
+                                required
                             ></input>
                         </div>
                         <div className='input-block'>
@@ -73,20 +74,23 @@ const PaymentDetails = ({ props }) => {
                                     id='creditCard'
                                     className='card-prop flex-grow-1'
                                     placeholder='Card Number'
-                                    format="#### #### #### ####" />
+                                    format="#### #### #### ####"
+                                    required />
                                 <CurrencyFormat
                                     className='card-prop'
                                     id='creditCardExpiry'
                                     format={cardExpiry}
                                     placeholder="MM/YY"
-                                    mask={['M', 'M', 'Y', 'Y']} />
+                                    mask={['M', 'M', 'Y', 'Y']}
+                                    required />
                                 <NumberFormat
                                     className='card-prop'
                                     id='creditCardCVC'
                                     format='###'
                                     type={'password'}
                                     mask=''
-                                    placeholder="CVC" />
+                                    placeholder="CVC"
+                                    required />
                             </div>
                             <div className='input-block'>
                                 <label className='lbl-input' htmlFor='adress01'>Adress</label>
@@ -95,6 +99,7 @@ const PaymentDetails = ({ props }) => {
                                     id='adress01'
                                     className='input-field'
                                     placeholder='Adress line 01'
+                                    required
                                 ></input>
                                 <input
                                     type='text'
