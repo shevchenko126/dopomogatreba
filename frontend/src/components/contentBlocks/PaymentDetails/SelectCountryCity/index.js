@@ -1,7 +1,16 @@
 import "../index.css";
 import React, { useState, useEffect } from "react";
 import "react-bootstrap"
-import Select from "react-select";
+import BaseSelect from "react-select";
+import FixRequiredSelect from "./FixRequiredSelect";
+
+const Select = props => (
+  <FixRequiredSelect
+    {...props}
+    SelectComponent={BaseSelect}
+    options={props.options}
+  />
+);
 
 const SelectCountryCity = () => {
 
@@ -34,7 +43,7 @@ const SelectCountryCity = () => {
     getCountry()
   }, [])
 
-  
+
 
   const handlecountry = (event) => {
     const getcountryid = event;
@@ -128,9 +137,6 @@ const SelectCountryCity = () => {
         <div className='input-block flex-grow-1'>
           <label className='lbl-input' htmlFor='country'>Country:</label>
           <Select
-            id="country"
-            name="country"
-            label="country"
             styles={customStyles}
             options={country.map((getcon, index) => ({
               key: index,
@@ -142,16 +148,15 @@ const SelectCountryCity = () => {
               (e) => {
                 const cntr = e.Iso2
                 handlecountry(cntr)
-                setSCity(null)
+                setSCity("")
               }}
+            required
           />
+
         </div>
         <div className='input-block flex-grow-1'>
           <label className='lbl-input' htmlFor='city'>City:</label>
           <Select
-            id="city"
-            name="city"
-            label="city"
             styles={customStyles}
             options={city.map((gcity, index) => ({
               key: index,
@@ -161,6 +166,7 @@ const SelectCountryCity = () => {
             }))}
             value={scity}
             onChange={(value) => setSCity(value)}
+            required
           />
         </div>
       </div>
