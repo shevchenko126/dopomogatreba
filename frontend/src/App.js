@@ -10,11 +10,11 @@ const paymentDetails = {
 
 function App() {
   return (
-    <div className="App">
+    < div className="App" >
       {/* <FreshRecommendedAds /> */}
-      <PaymentDetails props={paymentDetails}/>
+      <PaymentDetails props={paymentDetails} />
       {/* <SignInFeature /> */}
-    </div>
+    </div >
   );
 }
 

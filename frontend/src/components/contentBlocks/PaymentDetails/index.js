@@ -39,6 +39,8 @@ const PaymentDetails = ({ props }) => {
 
         return month + (year.length ? '/' + year : '');
     }
+    const currentDate = (new Date()).getDate();
+    const today = currentDate + (currentDate === 1 ? 'st' : (currentDate === 2 ? 'nd' : (currentDate === 3 ? 'rd' : 'th')))
 
     return (
         <>
@@ -125,13 +127,12 @@ const PaymentDetails = ({ props }) => {
                     </Modal.Body>
 
                     <Modal.Footer>
-                        <input
+                        <button
                             type='submit'
                             className='btn-submit'
-                            value='Subscribe &amp; Checkout'
                         // onClick={handleClose}
-                        ></input>
-                        <div className='payment-reminder'>We will bill you every month on the {(new Date()).getDate()}th, unless you cancel.</div>
+                        >Subscribe &amp; Checkout</button>
+                        <div className='payment-reminder'>We will bill you every month on the {today}, unless you cancel.</div>
                     </Modal.Footer>
                 </form>
             </Modal>
