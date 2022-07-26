@@ -5,7 +5,7 @@ import { ReactComponent as MobilImg } from "../../access/icons/DeviceMobileSpeak
 import mobilImg from "../../access/icons/DeviceMobileSpeaker.svg";
 import { ReactComponent as ArrowRight } from "../../access/icons/CaretRight.svg";
 
-const topCategory = [
+export const topCategory = [
   {
     id: 1,
     name: "Electronic",
@@ -55,7 +55,7 @@ const topCategory = [
   {
     id: 3,
     name: "Vehicles",
-    items: "69,114",
+    items: "(69,114)",
     img: mobilImg,
     links: [
       {
@@ -152,9 +152,9 @@ const TopCategory = () => {
       <div className="top-category">
         <h2 className="top-category__title">TopCategory</h2>
       </div>
-      <div className="row gy-3 gx-3">
+      <div className="row gy-3 gx-3  top-category__cards">
         {topCategory.map((cart) => (
-          <div key={cart.id} className="col-xs-12 col-sm-6 col-xl-4  ">
+          <div key={cart.id} className="col-xs-12 col-sm-6 col-xl-4 ">
             <div className="top-category__card">
               <div className="top-category-card__info">
                 <div className="top-category-card-info__blockTitle">

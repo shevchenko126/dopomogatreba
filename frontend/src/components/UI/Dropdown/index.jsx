@@ -3,10 +3,9 @@ import "./Dropdown.css";
 
 import arrowDown from "../../../access/icons/CaretDown.svg";
 
-const Dropdown = ({ array }) => {
-  const category = array;
+const Dropdown = ({ items }) => {
   const [isActive, setIsActive] = useState(false);
-  const [isCategory, isSetCategory] = useState(category[0]);
+  const [isCategory, isSetCategory] = useState(items[0]);
   return (
     <div className="dropdown">
       <div
@@ -18,7 +17,7 @@ const Dropdown = ({ array }) => {
       </div>
       {isActive && (
         <div className="dropdown__content">
-          {category.map((item, i) => (
+          {items.map((item, i) => (
             <div
               key={i}
               className="dropdown-content__item"
