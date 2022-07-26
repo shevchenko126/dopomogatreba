@@ -1,3 +1,4 @@
+from statistics import mode
 from django.conf import settings
 from django.db import models
 
@@ -15,7 +16,7 @@ class Advert(models.Model):
 
     class Meta:
         verbose_name = "Advert"
-        verbose_name_plural = "Adverts" 
+        verbose_name_plural = "Adverts"
 
 class AdvertCategory(models.Model):
     name = models.CharField(max_length=200)
@@ -27,7 +28,7 @@ class AdvertCategory(models.Model):
 
     class Meta:
         verbose_name = "Advert category"
-        verbose_name_plural = "Advert categories" 
+        verbose_name_plural = "Advert categories"
 
 class AdvertResponse(models.Model):
     title = models.CharField(max_length=200)
