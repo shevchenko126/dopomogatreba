@@ -13,15 +13,15 @@ class GetAdverts(viewsets.ModelViewSet):
     queryset = Advert.objects.all()
     permissions = (permissions.IsAuthenticatedOrReadOnly(), )
 
-    def get_serializer_class(self, *args, **kwargs):
-        token = self.request.headers.get('token', 'u')
-        print(token)
-        try:
-            user = Token.objects.get(key=token).user
-            print(user)
-            return FullAdvertSerializer(*args, **kwargs)
-        except Token.DoesNotExist:
-            return AdvertSerializer(*args, **kwargs)
+    # def get_serializer_class(self, *args, **kwargs):
+    #     token = self.request.headers.get('token', 'u')
+    #     print(token)
+        # try:
+        #     user = Token.objects.get(key=token).user
+        #     print(user)
+        #     return FullAdvertSerializer(*args, **kwargs)
+        # except Token.DoesNotExist:
+        #     return AdvertSerializer(*args, **kwargs)
 
     def list(self, request):
         adverts = Advert.objects.all()

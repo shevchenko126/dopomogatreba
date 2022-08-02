@@ -24,7 +24,7 @@ class ViewAllAdverts(View):
         # return JsonResponse({"data":adverts_data})
 
     def post(self, request):
-        name = request.POST.get('name', '')
+        name = request.POST.get('title', '')
 
         print(name)
         print(request.__dict__)
