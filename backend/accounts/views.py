@@ -86,3 +86,28 @@ class CustomAuthData(ObtainAuthToken):
             "user_id": user.pk,
             "user_email": user.email,
         })
+
+
+class ChangePassword(APIView):
+
+    permissions = (permissions.IsAuthenticatedOrReadOnly(), )
+
+    def get(self, request):
+        print(self.request.headers)
+        token = self.request.headers.get('token', '')
+
+        new_password = self.request.headers.get("new-password", '')
+        new_password_repeat = self.request.headers.get('new-password-repeat', '')
+
+        try: 
+            user = Token.objects.get(key=token).user
+        except Token.DoesNotExist:
+            content = {'message': 'Token not found'}
+            return Response(content)
+        if (new_password != new_password_repeat):
+            content = {'message': 'Pasword not the same'}
+            return Response(content)
+        user.set_password('admin')
+        user.save()
+        content = {'message': 'Pasword changed'}
+        return Response(content)
