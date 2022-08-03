@@ -1,8 +1,6 @@
 from django.shortcuts import render
-<<<<<<< Updated upstream
 
 # Create your views here.
-=======
 from django.http import HttpResponse, JsonResponse
 from rest_framework.authtoken.models import Token
 from rest_framework.response import Response
@@ -60,4 +58,3 @@ class ViewUserAdverts(View):
                 })
         return render(request, 'adverts/adverts.html', {"adverts":adverts_data, "show":True })
         # return JsonResponse({"data":adverts_data})
->>>>>>> Stashed changes
