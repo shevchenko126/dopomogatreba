@@ -1,9 +1,9 @@
 from django.shortcuts import render
-<<<<<<< Updated upstream
+from django.http import HttpResponse, JsonResponse
+from django.views import View
+from adverts.models import Advert
 
 # Create your views here.
-=======
->>>>>>> Stashed changes
 from django.http import HttpResponse, JsonResponse
 from rest_framework.authtoken.models import Token
 from rest_framework.response import Response
