@@ -3,7 +3,7 @@ from rest_framework import serializers
 from adverts.models import Advert
 
 class AdvertSerializer(serializers.ModelSerializer):
-    is_full = serializers.SerializerMethodField()
+    #is_full = serializers.SerializerMethodField()
     class Meta:
         model = Advert
         fields = ['title', 'image', 'description']
