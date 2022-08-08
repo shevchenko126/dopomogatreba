@@ -5,7 +5,7 @@
 from django.contrib import admin
 from django.urls import path
 from rest_framework import routers
-from adverts.views import ViewAllAdverts
+from adverts.views import ViewAllAdverts, ViewUserAdverts
 from adverts.api import GetAdverts
 
 
@@ -14,4 +14,5 @@ router.register('api', GetAdverts, 'api')
 
 urlpatterns = router.urls + [
      path('viewAdverts/', ViewAllAdverts.as_view()), # /viewAdverts/ return all adverts in DB
+     path('viewUserAdverts/', ViewUserAdverts.as_view()), # /viewUserAdverts/ return all adverts in DB by User token
 ]

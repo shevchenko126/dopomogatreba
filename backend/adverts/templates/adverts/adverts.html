@@ -1,10 +1,15 @@
 <html>
     <head></head>
     <body>
-        <h1>fefefefe</h1>
+        <h1>Adverts:</h1>
 
         {% for advert in adverts  %}
             <p>{{ advert.title }}</p>
+
+            <p>{{ advert.image }}</p>
+            <p>{{ advert.description }}</p>
+            <p>{{ advert.author }}</p>
+
         {% endfor %}
 
         {% if show %}
