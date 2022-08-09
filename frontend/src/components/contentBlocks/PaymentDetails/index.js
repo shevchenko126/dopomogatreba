@@ -7,7 +7,13 @@ import SelectCountryCity from './SelectCountryCity';
 import NumberFormat from 'react-number-format';
 import currencyFormat from './currencyFormat';
 
+const paymentDetails = {
+    accountPlan: 'Premium',
+    planPrice: 40
+  }
+
 const PaymentDetails = ({ props }) => {
+    props = paymentDetails;
     const { accountPlan, planPrice } = props
 
 
