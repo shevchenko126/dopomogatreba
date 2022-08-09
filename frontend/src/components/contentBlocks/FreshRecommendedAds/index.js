@@ -173,4 +173,3 @@ function FreshRecommendedAds() {
     )
 }
 
-export default FreshRecommendedAds
