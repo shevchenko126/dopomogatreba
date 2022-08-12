@@ -1,0 +1,29 @@
+.main_counter_area{
+position: absolute;
+width: 100%;
+height: 284px;
+left: 0px;
+top: 4315px;
+background-image: url( ' images/funfact.svg ' );
+background-position: 0 0;
+background-repeat: no-repeat;
+background-size: contain;
+padding-block: 50px;
+
+}
+.main_counter_area .main_counter_content .single_counter{
+   color: #fff;
+}
+
+.main_counter_area .main_counter_content .single_counter i{
+    font-size:36px;
+    float:left;  
+}
+
+.single_counter i {padding: 20px;}
+
+.statistic-counter {padding-top: 10px;}
+
+.p {font-style: nunito;}
+
+.h2 {font-style: nunito sans;}    
